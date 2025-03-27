@@ -47,7 +47,6 @@
 
 # CSS 태그
 
-- <p style="color : 색깔></p> : 색상 바꾸기
 - style="color : 색깔;background-color:배경색깔;width:실수px;height:실수수px"
   - color : 색깔 : 글씨색
   - background-color : 배경색
