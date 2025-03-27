@@ -48,8 +48,17 @@
 # CSS 태그
 
 - <p style="color : 색깔></p> : 색상 바꾸기
-- <p style="color : 색깔;background-color:배경색깔;width:원하는 크기px;height:원하는 높이px"> darkslateblue </p></h3>
-    - color : 색깔 : 글씨색
-    - background-color : 배경색
-    - width : 배경색 박스 가로길이
-    - height : 배경색 박스 세로길이
+- style="color : 색깔;background-color:배경색깔;width:실수px;height:실수수px"
+  - color : 색깔 : 글씨색
+  - background-color : 배경색
+  - width : 배경색 박스 가로길이
+  - height : 배경색 박스 세로길이
+- style="border : 3px solid 색깔; border-radius:실수px
+  - border : 테두리 생성
+  - border-radius : 테두리의 모서리를 둥글게 만듬(숫자 크기up->더 둥글게)
+- style="background-color : 색깔 ; padding:실수px; margin:실수px; text-align:위치치"
+  - padding : 박스 만들기
+    - background-color : 박스 배경색
+    - padding : 실수px : 박스 두께
+    - margin : 실수px : 여백 지정
+    - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
