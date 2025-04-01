@@ -59,5 +59,20 @@
   - padding : 박스 만들기
     - background-color : 박스 배경색
     - padding : 실수px : 박스 두께
+      - padding: Apx Bpx : A 상하 B 좌우 두께
+    - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
+    - margin : 실수px : 여백 지정
+      - margin-top : 위 글씨와 거리
+      - margin-bottom : 아래 글씨와 거리
+      - margin-left : 왼쪽 글씨와 거리 - margin-right : 오른쪽 글씨와 거리
+      - margin: Apx Bpx : A 상하 B 좌우 거리
+    - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
+
+# CSS 문법2
+
+- <head> 안에 <style>
+    - <head><style>  글씨 { color: 색깔; }</style></head>
+- 아래와 같이 태그를 직접 지정하고 스타일 넣으면 태그 전체에 적용됨
+  - 글씨 {text-align: right; /_ 요소 안의 텍스트를 오른쪽 정렬 _/}
     - margin : 실수px : 여백 지정
     - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
