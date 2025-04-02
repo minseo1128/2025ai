@@ -47,7 +47,7 @@
 
 # CSS 태그
 
-- style="color : 색깔;background-color:배경색깔;width:실수px;height:실수수px"
+- style="color : 색깔;background-color:배경색깔;width:실수px;height:실수px"
   - color : 색깔 : 글씨색
   - background-color : 배경색
   - width : 배경색 박스 가로길이
@@ -55,7 +55,7 @@
 - style="border : 3px solid 색깔; border-radius:실수px
   - border : 테두리 생성
   - border-radius : 테두리의 모서리를 둥글게 만듬(숫자 크기up->더 둥글게)
-- style="background-color : 색깔 ; padding:실수px; margin:실수px; text-align:위치치"
+- style="background-color : 색깔 ; padding:실수px; margin:실수px; text-align:위치"
   - padding : 박스 만들기
     - background-color : 박스 배경색
     - padding : 실수px : 박스 두께
