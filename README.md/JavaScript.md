@@ -27,3 +27,10 @@
 
 * 참고
   - body - div - div - h1 - ul - li - li
+
+# console.log()
+
+- 변수에 해당되는 값, 어떤 함수가 호출되는지 F12 누르고 확인 가능
+  - console.log("문자취급");
+
+# 자료형형
