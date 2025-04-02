@@ -25,3 +25,5 @@
 - undefined : 값이 할당되지 않음
 - symbol : ES6에서 추가된 자료형/유일한 값
 
+* 참고
+  - body - div - div - h1 - ul - li - li
