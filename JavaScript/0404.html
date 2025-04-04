@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM복습</title>
+</head>
+<body>
+    <h1 class="팀1">민서네</h1>
+    <h1 class="팀2">태준이네</H1>
+    
+    <script>
+        let team1
+        team1=document.querySelector(".팀1")
+
+        let team2
+        team2=document.querySelector(".팀2")
+
+        team1.style.color="pink"
+        team1.style.backgroundColor="green"
+        team1.textContent="민서:레오나"
+
+        team2.style.color="aquamarine"
+        team2.style.backgroundColor="pink"
+        team2.textContent="태준:사일러스"
+
+        team1.addEventListener("click",function(){
+            alert("잘못된 접근입니다")
+            console.log("민서네팀 클릭했습니다")
+        })
+
+        team1.addEventListener("mouseover",function(){
+            team1.style.color="white"
+        })
+
+        team1.addEventListener("mouseout",function(){
+            team1.style.color="orange"
+        })
+
+        team2.addEventListener("mousedown",function(){
+            team2.style.backgroundColor="purple"
+        })
+
+        team2.addEventListener("mouseup",function(){
+            team2.style.backgroundColor="hotpink"
+        })
+
+    </script>
+</body>
+</html>

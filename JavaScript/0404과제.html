@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3회차 실습1 이벤트</title>
+  </head>
+  <body>
+    <h1
+      class="team1"
+      ,
+      style="
+        background-color: aquamarine;
+        width: 500px;
+        height: 300px;
+        color: black;
+      "
+    >
+      나는 민트랍니다 안티가 많아요 ㅜ
+    </h1>
+    <h1
+      class="team2"
+      ,
+      style="
+        background-color: dodgerblue;
+        width: 500px;
+        height: 300px;
+        color: black;
+      "
+    >
+      나는 블루
+    </h1>
+
+    <script>
+      let team1;
+      team1 = document.querySelector(".team1")
+
+      let team2;
+      team2 = document.querySelector(".team2")
+
+      team1.addEventListener("mouseup",function(){
+        team1.style.backgroundColor="aquamarine"
+        })
+
+      team1.addEventListener("mousedown",function(){
+        team1.style.backgroundColor="hotpink"
+        })
+
+      team2.addEventListener("mouseup", function () {
+        team2.style.backgroundColor = "dodgerblue"
+      })
+
+      team2.addEventListener("mousedown", function () {
+        team2.style.backgroundColor = "orange"
+      })
+    </script>
+  </body>
+</html>

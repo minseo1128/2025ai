@@ -33,3 +33,31 @@
 - 변수에 해당되는 값, 어떤 함수가 호출되는지 F12 누르고 확인 가능
   - console.log("문자취급");
 
+# document.queryselector()
+
+- 개념
+  - css 선택자(클래스, iD) 를 기반으로 원하는 요소를 선택
+  - 단일 요소만 찾아준다. 해당하는 태그가 여러개일 경우 맨 위의 것을 선택
+
+# Dom
+
+- document 객체로 DOM에 접근(브라우저의 문서에 접근하는 객체)
+- 원하는 태그 선택->가지고 놀기
+
+# style 조작 방법
+
+- 개체지정.style.**원하는css** =
+- DOM에서 css 스타일 명 표기 방법
+    - - 기호는 사용 안 함. 
+    text-align → textAlign /  background-color → backgroundColor 으로 표기
+    - 두 단어의 스타일명은 대문자로 시작함.
+
+# 콜백함수(익명함수)
+
+- 특정한 이벤트가 발생했거나 작업이 완료 되었을 때 호출되는 함수
+- function함수이름(){}
+
+# 이벤트
+
+- 대상.addEventListener("이벤트종류",코드)
+
