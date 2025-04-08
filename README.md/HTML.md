@@ -67,6 +67,8 @@
       - margin-left : 왼쪽 글씨와 거리 - margin-right : 오른쪽 글씨와 거리
       - margin: Apx Bpx : A 상하 B 좌우 거리
     - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
+    - font-size: Apt/px : 글씨 크기
+    - font-weight: A : 글씨 두께/100단위로 써야함(100-900)
 
 # CSS 문법2
 
@@ -74,8 +76,6 @@
     - <head><style>  글씨 { color: 색깔; }</style></head>
 - 아래와 같이 태그를 직접 지정하고 스타일 넣으면 태그 전체에 적용됨
   - 글씨 {text-align: right; /_ 요소 안의 텍스트를 오른쪽 정렬 _/}
-    - margin : 실수px : 여백 지정
-    - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
 - *{text-align: A ;} *를 앞에 붙여주면 전체 태그 적용
 
 # 시맨틱 태그
@@ -83,3 +83,21 @@
 - 개념
   - div태그와 유사한 역할
   - 태그의 이름이으로 웹 페이지의 구조를 파악 가능
+
+# CSS 문법3(0408.html/0408.css 참고)
+
+- <head> 안에 <link> 삽입 <herf> 속성 사용해 스타일 시트 파일의 경로를 지정
+  - style.css 파일에서 스타일을 가져오기
+    - <link rel="대상" href="이미지 주소(stylesheet)">
+    - <link rel="대상" herf="CSS파일 만들기">
+- font-family : 텍스트에 사용할 폰트 종류 지정
+- 주로 p 태그 안에 넣음 p{코드;}
+  - p{line-height:Apx;} : 텍스트 줄 간격 지정(px/%)
+  - p{letter-spacing:Bpx;} : 문자 사이의의 간격 넓히기(px/%/em)
+  - p{texy-decoration: 스타일 지정;} : underline(밑줄)/line-though(취소선)/overline(중앙선) 등
+- 주로 a 태그 안에 넣음 a{코드;}
+  - text-decoration: none : 링크 밑줄 없애기
+  - font-style: 스타일 지정 : 텍스트 스타일(기울임) 정함(기울임:italic/보통/normal/해제obiaue)
+  - texy-shadow: Apx Bpx Cpx 색깔 : 텍스트에 그림자 추가(A:가로/B:세로/C:흐림정도)
+  - font-family: "글씨체",serif; : 글씨체 바꾸기(밑에 글씨체 코드 복붙해야함)
+

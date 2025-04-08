@@ -1,0 +1,23 @@
+#title{
+    border: 3pt solid black;
+    width: 45%;
+    text-align: center;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 50pt;
+}
+
+.shadow{
+    color: #FFF;
+    text-shadow: 3px 3px rgb(255, 12, 125);
+}
+
+.option {
+    font-size: 20pt;
+    font-family: 'Jua', sans-serif;
+}
+
+.list {
+    font-style: italic;
+    font-size: 20pt;
+    line-height: 50px;
+}
