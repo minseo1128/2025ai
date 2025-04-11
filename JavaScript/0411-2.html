@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 배우는 날</title>
+</head>
+<body>
+        <h1> 김민겸 </h1>
+        <img id="김민겸" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxtHU0AoOYtAp0xg16bSs_IZ_OciE9fm_cg&s" alt="">
+        <button>버튼1</button>
+        <button>버튼2</button>
+        <button>버튼3</button>
+        <script>
+        let 사진 = document.querySelector("#김민겸")
+        console.log(사진)
+
+        사진.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnzKCnlxamv4woIVKzkayhQydjvJzvyayhzQ&s")
+        사진.addEventListener("click",function(){
+            console.log("나 내일 앨범 내")
+            alert("구라야")
+        })
+    </script>
+</body>
+</html>

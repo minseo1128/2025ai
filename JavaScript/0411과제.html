@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4회차 실습1 이벤트, 속성조작</title>
+</head>
+<body>
+    <h1> 버튼 클릭에 따른 이미지 슬라이드</h1>
+    <br>
+    <button class="team1", style="background-color:rgb(110, 102, 161); color:white; border-radius: 10px; width:200px; height:50px; font-size:30px; margin-left:28px;" >1</button>
+    <button class="team2", style="background-color:rgb(110, 102, 161); color:white; border-radius: 10px; width:200px; height:50px; font-size:30px; margin-left:28px;" >2</button>
+    <button class="team3", style="background-color:rgb(110, 102, 161); color:white; border-radius: 10px; width:200px; height:50px; font-size:30px; margin-left:28px;" >3</button>
+
+    <br>
+    <br>
+
+    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5CzSnA09YKPPFzp-ytMmdPW7VFcoJ6slzg&s" alt="" style="margin-left:20px;">
+
+    <script>
+
+        let 사진1 = document.querySelector(".team1")
+        console.log(사진1)
+        let 사진2 = document.querySelector(".team2")
+        console.log(사진2)
+        let 사진3 = document.querySelector(".team3")
+        console.log(사진3)
+        let img = document.querySelector("#img")
+
+        사진1.addEventListener("click", function(){
+            img.setAttribute("src","https://blog.kakaocdn.net/dn/bokXXV/btrvDijl4pP/u8KkR18q1NYKztxo8sa3r0/img.jpg")
+        })
+        
+        사진2.addEventListener("click",function(){
+            img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5VOtY9suw4Gtqa2yVoG9Ff7y8TodGv7Agg&s")
+        })
+
+        사진3.addEventListener("click",function(){
+            img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR1AnFq-HVz80DDkOmJdXv1HvKh_yuG63H6w&s")
+        })
+    </script>
+</body>
+</html>

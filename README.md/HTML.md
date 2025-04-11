@@ -100,4 +100,3 @@
   - font-style: 스타일 지정 : 텍스트 스타일(기울임) 정함(기울임:italic/보통/normal/해제obiaue)
   - texy-shadow: Apx Bpx Cpx 색깔 : 텍스트에 그림자 추가(A:가로/B:세로/C:흐림정도)
   - font-family: "글씨체",serif; : 글씨체 바꾸기(밑에 글씨체 코드 복붙해야함)
-
