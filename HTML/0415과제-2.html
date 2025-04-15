@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5회차 form 실습2</title>
+    <style>
+        fieldset{
+            border:0px;
+        }
+        .button{
+            color:aliceblue;width:280px; height:50px; background-color: rgb(50, 50, 188);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 50px; margin-bottom:0px; color:rgb(50, 50, 188)">회원가입 페이지</h1>
+        <br>
+        <br>
+    <form>
+    <fieldset>
+        <fieldset style="background-color:rgb(217, 226, 234); width:600px;">
+            <h2 style="color:rgb(50,50,188)">로그인 정보</h2>
+            <h5 style="color:gray; font-weight:1px">로그인에 사용할 ID와 비밀번호를 입력해 주세요<h5>
+        <hr>
+        <h4 style="margin-bottom:-20px;"><label for="" >아이디<br><input type="text" placeholder="최대 10자"></label></h4>
+        <br>
+        <h4 style="margin-bottom:-20px;"><label for="" >비밀번호<br><input type="password" placeholder="영어,숫자 섞어서"></label></h4>
+        <br>
+        <h4><label for="" >비밀번호 확인<br><input type="password" placeholder="영어,숫자 섞어서"></label></h4>
+    </fieldset>
+    <br>
+    <fieldset style="background-color:rgb(217,226,234); width:600px;">
+        <h2 style="color:rgb(50,50,188)">개인정보</h2>
+        <h5 style="color:gray; font-weight:1px">여러분의 개인정보를 입력해주세요<h5>
+        <hr>
+        <h4 style="margin-bottom:-20px;"><label for="" >주소<br><br><input type="text" placeholder="ㅇㅇ구 ㅇㅇ동"></label></h4>
+        <br>
+        <h4>연령대<br></h4>
+        <label><input type="radio" name="연령" value="a">10~19</label>
+        <label><input type="radio" name="연령" value="b">20~29</label>
+        <label><input type="radio" name="연령" value="c">30~39</label>
+        <label><input type="radio" name="연령" value="d">40~49</label>
+        <label><input type="radio" name="연령" value="e">50이상</label>
+
+        <h4>성별</h4>
+        <label><input type="radio" name="성별" value="man">남</label>
+        <label><input type="radio" name="성별" value="woman">여</label>
+
+        <h4>취미</h4>
+        <label><input type="checkbox" name="취미" value="game">게임</label>
+        <label><input type="checkbox" name="취미" value="youtube">유튜브</label>
+        <label><input type="checkbox" name="취미" value="music">음악</label>
+        <br>
+        <label><input type="checkbox" name="취미"value="sports">운동</label>
+        <label><input type="checkbox" name="취미" value="book">독서</label>
+        <label><input type="checkbox" name="취미" value="trip">여행</label>
+        <label><input type="checkbox" name="취미" value="creating">창작</label>
+    </fieldset>
+    <br>
+    <hr>
+    <button class="button"  type="submit">회원 가입</button>
+    <button class="button" type="reset">다시 입력</button>
+</form>
+</body>
+</html>
