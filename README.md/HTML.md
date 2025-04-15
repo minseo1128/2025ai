@@ -100,3 +100,12 @@
   - font-style: 스타일 지정 : 텍스트 스타일(기울임) 정함(기울임:italic/보통/normal/해제obiaue)
   - texy-shadow: Apx Bpx Cpx 색깔 : 텍스트에 그림자 추가(A:가로/B:세로/C:흐림정도)
   - font-family: "글씨체",serif; : 글씨체 바꾸기(밑에 글씨체 코드 복붙해야함)
+
+# table 
+
+- 표를 만드는 데에 사용하는 태그
+  - <table></table> 태그 안에 <tr> 태그 여러 개 중첩시켜 행 만들기-><td> 태그 여러 개 중첩시켜 셀을 만듬
+  - 스타일은 table 태그 안에 집어 넣음
+    - border : 테이블 셀들의 테두리 두께를 지정
+    - colspan : 셀이 차지하는 열의 수를 지정
+    - rowspan : 셀이 차지하는 행의 수를 지정

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>테이블 복습</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+    </style>
+<body>
+<!-- 줄 3개 칸은 4개짜리 테이블 -->
+ <table border="1px">
+
+    <table>
+        <colgroup>
+            <col style="background-color:skyblue;">
+            <col>
+            <col style="background-color:navy;">
+        </colgroup>
+    </table>
+    <thead>
+        <td>1줄 1칸</td>
+        <td>1줄 2칸</td>
+        <td>1줄 3칸</td>
+        <td>1줄 4칸</td>
+    </thead>
+    <tbody>
+        <td>2줄 1칸</td>
+        <td>2줄 2칸</td>
+        <td>2줄 3칸</td>
+        <td>2줄 4칸</td>
+    </tbody>
+    <tr>
+        <td>3줄 1칸</td>
+        <td>3줄 2칸</td>
+        <td>3줄 3칸</td>
+        <td>3줄 4칸</td>
+    </tr>
+    <tr>
+        <td colspan="2">3줄 1칸</td>
+        <td>3줄 2칸</td>
+    </tr>
+ </table>
+</body>
+</html>
