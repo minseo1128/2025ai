@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="데이터 전송할 서버">
+        <fieldset>
+           <legend>필드의 제목</legend> 
+
+           <label for="">아이디 <input type="text" placeholder="최소4자" autofocus></label>
+           <label for="">비밀번호 <input type="password" placeholder="영문 특수문자 숫자 혼합  8자 이상"></label>
+
+           <label for="연결">이름</label>
+           <input type="text" name="" id="연결">
+
+           <br>
+
+           <label>이메일<input type="email"></label>
+           <label>전화번호<input type="tel"></label>
+
+        </fieldset>
+        <fieldset>
+            <legend>필드의 제목</legend>
+
+            <h3> 성별 </h3>
+            <label><input type="radio" name="성별">여자</label>
+            <label><input type="radio" name="성별">남자</label>
+
+            <h3> 음식 </h3>
+            <label><input type="checkbox" checked name="음식" value="chicken">치킨</label>
+            <label><input type="checkbox" name="음식" value="pizza">피자</label>
+            <label><input type="checkbox" name="음식" value="gopchang">곱창</label>
+            <label><input type="checkbox" name="음식" value="hamburger">햄버거</label>
+            <label><input type="checkbox" name="음식" value="meat">갈비</label>
+            
+            <br>
+
+            <button type="reset">초기화</button>
+            <button type="button">기능 없는 버튼</button>
+            <button type="submit">제출</button>
+        
+        </fieldset>
+
+    </form>
+</body>
+</html>
