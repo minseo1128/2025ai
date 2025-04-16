@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0425 자바스크립트 속성 조작</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf6wZ1RHv-qCIBsynMzD36B6Fzem31llK_0A&s" alt="">
+    <br>
+    <input type=""text" placeholder="입력하세요">
+    <button>버튼</button>
+    <script>
+        let 릴러말즈
+        릴러말즈=document.querySelector("img")
+        릴러말즈.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX69c_bXhIefLRw8jrqUUNnidhIS5xEckaQA&s")
+        릴러말즈.setAttribute("width","300px")
+
+        let 나루토민겸
+        나루토민겸=릴러말즈.getAttribute("src")
+        console.log(나루토민겸)
+
+        let 입력창
+        입력창=document.querySelector("input")
+        
+        let 버튼
+        버튼=document.querySelector("button")
+
+        버튼.addEventListener("click",function(){
+            console.log(입력창.value)
+        
+        })
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4회차 실습2.getAttribute-IQ테스트</title>
+    <style>
+        fieldset{
+            border:0px;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <fieldset>
+        <h1>IQ테스트</h1>
+        <h4 style="margin-bottom:-20px; "><label for="" >아이디<input type="text" id="n" style="margin-left:10px;"></label></h4>
+        <br>
+        <h4 style="margin-bottom:-20px; "><label for="" >나이</label><input type="text" id="a" style="margin-left:10px;"></label></h4>
+        <br>
+        <h4><label for="" >성별<input type="text" id="s" style="margin-left:10px;"></label></h4>
+        
+    </fieldset>
+    
+    <button id="sub" type="button">제출</button>
+
+    <script>
+
+        let 제출=document.querySelector("#sub")
+        제출.addEventListener("click",function(){
+            const n=document.querySelector("#n")
+            let 이름=n.value
+        
+            const a=document.querySelector("#a")
+            let 나이=a.value
+
+            const s=document.querySelector("#s")
+            let 성별=s.value
+
+            console.log(n)
+            console.log(a)
+            console.log(s)
+
+            confirm(`${이름}님, ${나이}살에 ${성별} 맞습니까?`)
+        })
+    </script>
+</body>
+</html>
