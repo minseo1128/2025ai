@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0425 자바스크립트 속성 조작</title>
+    <style>
+        .tj{color:cornflowerblue;background-color: slateblue;}
+    </style>
 </head>
 <body>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf6wZ1RHv-qCIBsynMzD36B6Fzem31llK_0A&s" alt="">
     <br>
-    <input type=""text" placeholder="입력하세요">
+    <input type="text" placeholder="입력하세요">
     <button>버튼</button>
+
+    <h1>릴러말즈는 살아있는가</h1>
     <script>
         let 릴러말즈
         릴러말즈=document.querySelector("img")
@@ -31,6 +36,11 @@
         
         })
 
+        let 김민겸
+        김민겸=document.querySelector("h1")
+        김민겸.classList.add("leel") //클래스 추가하기
+        // 김민겸.classList.remove("leel") 클래스 제거하기
+        // 김민겸.classList.toggle("leel") 클래스 추가 혹은 삭제제
    </script> 
 </body>
 </html>
