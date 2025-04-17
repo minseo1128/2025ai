@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .label {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend><h1 style="font-size:50px; margin-top:9px;">회원가입 페이지</h1></legend>
+            <h2 style="font-size:30px; margin-top:5px;">로그인 정보</h2>
+            <label class="label">ID 입력<input type="password" placeholder="영어, 숫자 섞어서"></label>
+
+            <br>
+
+            <label><span class="label">PW 입력</span>(필수)<input type="password" placeholder="영어, 숫자 섞어서" required></label>
+
+            <br>
+
+            <label><span class="label">PW 입력 확인</span>(필수)<input type="password" placeholder="영어, 숫자 섞어서" required></label>
+
+            <br>
+
+            <hr>
+            <h2 style="font-size:30px; margin-top:5px;">개인정보</h2>
+            <h4><label for="" >주소<br><input type="text" style="margin-top:-20px;"></label></h4>
+            
+            <h4>연령대<br></h4>
+            <label><input type="radio" name="연령" value="a">10대</label>
+            <label><input type="radio" name="연령" value="b">20대</label>
+            <label><input type="radio" name="연령" value="c">30대</label>
+            <label><input type="radio" name="연령" value="d">40대</label>
+            <label><input type="radio" name="연령" value="e">50이상</label>
+            
+            <h4>성별</h4>
+            <label><input type="radio" name="성별" value="man">남</label>
+            <label><input type="radio" name="성별" value="woman">여</label>
+            
+            <h4>취미</h4>
+            <label><input type="checkbox" name="취미" value="game">게임</label>
+            <label><input type="checkbox" name="취미" value="youtube">유튜브</label>
+            <label><input type="checkbox" name="취미" value="nalmuc">잉여짓</label>
+            <label><input type="checkbox" name="취미"value="sports">운동</label>
+            <label><input type="checkbox" name="취미" value="book">독서</label>
+            <label><input type="checkbox" name="취미" value="trip">여행</label>
+            <label><input type="checkbox" name="취미" value="creating">창작</label>
+
+            <h4><label for="" >이메일<br><input type="password" placeholder="abcd@naver.com"></label></h4>
+            <h4><label for="" >연락처<br><input type="password" placeholder="000-00000-0000"></label></h4>
+
+            <h4><label>생년월일</label><br><input type="date"></label></h4>
+
+            <label>키(최소130 최대195 기본150 단위5) <input type="range" min="130" max="195" step="5"></label>
+
+            <br>
+            <br>
+            <label>사진 <input type="file"></label>
+            <hr>
+            <button type="submit">회원 가입</button>
+            <button type="reset">다시 입력</button>
+        </fieldset>
+    </form>
+</body>
+</html>
