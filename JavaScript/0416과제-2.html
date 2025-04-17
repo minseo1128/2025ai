@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .team1{color:blueviolet;}
+        .team2{background-color:lightskyblue; border:2px solid black;}
+        .team3{border:3px dotted black;}
+    </style>
 </head>
 <body>
-    <h1>나를 꾸며주세요^^</h1>
+    <h1 class="h1">나를 꾸며주세요^^</h1>
 
-    <button id="col" class="team1" type="button" style="color:blueviolet;">색깔 넣기</button>
-    <button id="back" class="team2" type="button" style="background-color:lightskyblue; border:2px solid black;">배경 넣기</button>
-    <button id="line" class="team3" type="button" style="border:3px dotted black;" >테두리 넣기</button>
+    <button class="team1" type="button" >색깔 넣기</button>
+    <button class="team2" type="button" >배경 넣기</button>
+    <button class="team3" type="button" >테두리 넣기</button>
 
     <script>
-    let 색깔넣기;
-    col = document.querySelector(".col")
+        let h1;
+        h1=document.querySelector(".h1")
 
-    let back;
-    team2 = document.querySelector(".back")
-    
-    let line;
-    team1 = document.querySelector(".team1")
+        let team1;
+        team1=document.querySelector(".team1")
+        team1.addEventListener("click",function(){
+        h1.classList.add("team1") 
+        })
 
+        let team2;
+        team2=document.querySelector(".team2")
+        team2.addEventListener("click",function(){
+        h1.classList.add("team2") 
+        })
+
+        
+        let team3;
+        team3=document.querySelector(".team3")
+        team3.addEventListener("click",function(){
+        h1.classList.add("team3") 
+        })
     </script>
 </body>
 </html>
