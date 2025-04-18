@@ -86,5 +86,24 @@
 # DOM
 
 - 변수.setAttribute("바꿀 속성","무엇으로 바꿀지") : 태그의 속성을 바꾸는 기능 
+- 속성조작 : src, href, 등 태그가 가진 속성을 수정하는 기능/대상.setAttribute("속성", "값") 형식으로 사용할 수 있음
+  - img태그지정.setAttribute('src', 'newImage.jpg');
+- 속성 가져오기 : src, href, 등 태그가 가진 속성을 가져오는 기능/대상.getAttribute(”속성”) or (”값”) 형식으로 사용
+  - img태그지정.getAttribute('src');
+- value 가져오기 : input의 값을 가져오는 것은 value로 접근해야 함  
+  - const 이름 = document.querySelector('#username') // 대상 지정
+  - let 값 = 이름.value;
 
-# 
+# 객체 생성과 삭제
+
+- 생성하기
+  - let 새로운 태그
+    새로운 태그 = document.createElement('div');
+  - 만든 객체를 부모에게 붙이기: 태그를 만들어 변수에 저장->부모에게 붙여야 화면에 나타남
+    - 부모 바꾸기 : 부모태그.appendChild(만든div태그);
+- 삭제하기
+  - 부모 지정
+  - 부모에서 removeChild 함수를 사용하여 원하는 자식을 제거
+  - const 부모 = document.querySelector('#parent');
+  - const 삭제대상 = document.querySelector('#child');
+  - 부모.removeChild(삭제대상);

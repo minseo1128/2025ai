@@ -65,6 +65,7 @@
       - margin-top : 위 글씨와 거리
       - margin-bottom : 아래 글씨와 거리
       - margin-left : 왼쪽 글씨와 거리 - margin-right : 오른쪽 글씨와 거리
+      - margin-legt: auto; margin-right: auto : 중앙
       - margin: Apx Bpx : A 상하 B 좌우 거리
     - text-align:위치 : 왼쪽/가운데/오른쪽 등 위치
     - font-size: Apt/px : 글씨 크기
