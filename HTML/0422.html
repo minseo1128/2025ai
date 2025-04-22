@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0422 폼</title>
+
+    <style>
+        div {
+            background-color: aquamarine;
+            width:50%; height: 200px;
+            cursor: cell;
+            border-bottom-right-radius: 40px;
+            border-bottom: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1> 폼 및 기타 등등 내용 </h1>
+    <form> 
+        <label> 셀렉 
+                <select name="치킨메뉴" id="">
+                    <option value="2chicken"> 두마리치킨 </option>
+                    <option value="sauce"> 양념치킨 </option>
+                    <option value="fried"> 후라이드치킨 </option>
+                </select>
+        </label>
+        
+        <br>
+
+        <label> 선택 
+            <input list="ㅁㄴㅇ">
+            <datalist id="ㅁㄴㅇ">
+                <option value="cat">고양이</option>
+                <option value="dog">고양이</option>
+                <option value="hamster">햄스터</option>
+            </datalist>
+            
+        </label>
+        
+        <br>
+
+        <label> 자기소개 
+            <textarea row="5" cols="100"></textarea> </label>
+
+        <div class="box">
+        </div>
+
+    </form>
+
+    <a href="/4회차 실습1.css">다음 페이지</a>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6회차 실습2</title>
+
+    <style>
+        fieldset{
+            background-color: azure;
+            border:3px dotted grey;
+            border-radius: 20px; 
+            width:60%; margin:auto;
+            margin-top: 60px;
+            margin-bottom: -30px;
+            text-align: center;
+        }
+
+        h4{
+            color:dimgray; 
+            font-weight:400; 
+            font-size:13px; 
+            text-align:center;
+            margin-top:-8px; margin-bottom:-2px;
+        }
+
+        label{
+            font-size: 13px;
+        }
+
+        textarea{
+            width: 450px;
+            height: 80px;
+        }
+
+        div {
+            text-align: left;
+        }
+
+        .purchase {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .purchase button {
+            width: 150px;
+            height: 50px;
+            margin: 15px;
+            font-size: 15pt;
+            font-weight: 900;
+            background-color:deepskyblue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1 style="text-align:center;">주문 페이지</h1>
+        <br>
+        <h4>치킨 주문을 위한 페이지 입니다. 정확한 내용을 기재 바랍니다.</h4>
+        
+        <fieldset>
+            <h3 style="font-size:22px;"> 메뉴 선택 </h3>
+            <h4> 사진을 누르면 메뉴가 선택됨 </h4>
+
+            <br>
+
+            <label><input type="radio" name="닭" value="k">간장티꾸닭
+            <img style="width: 90px;" src="https://i.pinimg.com/originals/2a/da/be/2adabeb2b095d65ae325b49d642fa1d6.jpg"></label>
+            <label><input type="radio" name="닭" value="s">스노우 어니언
+            <img style="width: 50px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJuBDl-fV-z2p4Fm_GzQEtJEqZaBcX3OzRQ0rewvoBaw&s"></label>
+            <label><input type="radio" name="닭" value="y">양념
+            <img style="width: 50px;" src="https://cdn.imweb.me/upload/S20220826948cbdc34dca3/a7e21622bc1f0.png"></label>
+
+            <br>
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            <h3 style="font-size:19px;"> 사이드메뉴 </h3>
+            <label><input type="checkbox" name="사이드" value="che">치즈볼</label>
+            <label><input type="checkbox" name="사이드" value="mm">치킨무</label>
+            <label><input type="checkbox" name="사이드" value="mus">머스타드 소스</label>
+            <label><input type="checkbox" name="사이드" value="chil">칠리 소스</label>
+
+            <br>
+            <br>
+
+            <h3 style="font-size:19px;"> 선택사항 </h3>
+            <label><input type="checkbox" name="선택" value="pla">비닐 장갑</label>
+            <label><input type="checkbox" name="선택" value="pid">나무젓가락 제외</label>
+            <label><input type="checkbox" name="선택" value="nonm">치킨 무 제외</label>
+            <label><input type="checkbox" name="선택" value="nonc">소스 제외</label>
+
+            <br>
+            <br>
+
+            <label>맵기(1~5) <input type="range" min="1" max="5" step="1"></label>
+            
+            <br>
+            <br>
+            
+            <label> 소스양
+                <select name="소스양" id="">
+                    <option value="man"> 많음 </option>
+                    <option value="mid"> 보통 </option>
+                    <option value="lit"> 적음 </option>
+                </select>
+            </label>
+
+            <br>
+            <br>
+
+            <h3 style="font-size:19px;"> 기타 희망사항 </h3>
+            <label> 
+                <textarea row="5" cols="100"></textarea> </label>
+    
+            <div class="box">
+            </div>
+        
+        </fieldset>
+        <fieldset>
+            <h3 style="font-size:22px;"> 주문 정보 입력 </h3>
+            <h4> 주문자의 정보 </h4>
+            
+            <br>
+
+            <div>
+                <label for="" >아이디 <input type="text" placeholder="홍길동"></label></h4>
+                <br>
+                
+                <label for="" >전화번호 <input type="text" placeholder="000-0000-0000"></label></h4>
+                <br>
+                
+                <label for="" >주소 <input type="text" placeholder="ㅇㅇ동 ㅇㅇ번지"></label></h4>
+                <br>
+                
+                <label for="" >쿠폰번호 <input type="text" placeholder="0000-0000-0000"></label></h4>
+                <br>
+            
+                <label>도착날짜</label><input type="date"></label>
+                <br>
+                <span style="font-size:16px; font-weight:700; margin-top:2px;">지불방법</span>
+                <label><input type="radio" name="지불" value="car">카드</label>
+                <label><input type="radio" name="지불" value="cup">쿠폰</label>
+                <label><input type="radio" name="지불" value="cash">현금</label>
+                
+                <br>
+
+                <span style="font-size:16px; font-weight:700; margin-top:2px;">카드사</span>
+                <label><input type="radio" name="지불1" value="car">신한</label>
+                <label><input type="radio" name="지불1" value="cup">국민</label>
+                <label><input type="radio" name="지불1" value="cash">카카오</label>
+                
+                <br>
+                
+                <label for="" styl>카드번호<input type="text" placeholder="000-0000-0000"></label></h4>
+
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3 style="font-size:22px;"> 개인정보 수집 및 이용 동의 </h3>
+            <br>
+            <h4>주문 정보를 저장하기 위해 회원의 개인정보를 수집하고 있으며, 수집에 동의하지 않으며 주문이 불가능 합니다.</h4>
+            
+            <br>
+            <label><input type="radio" name="동의" value="car">동의</label>
+            <label><input type="radio" name="동의" value="cup">거절</label>
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <h3 style="font-size:22px;"> 이벤트 문자 및 알림 수신 </h3>
+            <br>
+            <h4>이벤트 및 각종 혜택 정보 제공을 위한 문자 전송을 수신합니다.</h4>
+            <br>
+            <label><input type="radio" name="비동의" value="car">동의</label>
+            <label><input type="radio" name="비동의" value="cup">거절</label>
+            
+
+            
+            </div>
+        </fieldset>
+        
+        <br>
+        <br>
+
+        <div class="purchase">
+            <button type="submit">주문</button>
+            <button type="reset">주문취소</button>
+        </div>
+
+</body>
+</html>
