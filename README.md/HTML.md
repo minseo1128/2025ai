@@ -189,6 +189,18 @@
   - not-allowed : 사용 불가능한 요소 위에 마우스가 올라갈 때 금지 모양으로 변경
   - cell : 엑셀에서 자주 사용함/+ 모양
 - border
+  - 테두리 두께
   - border-style/border-width/border-color 세 가지 옵션을 각각 따로 사용하는 것으로 분리도 가능
   - border-radius 속성은 px가 아닌 % 단위로도 조절 가능
   - 가로세로 다르게 조절 가능/top-left, bottom-left 등 한 모서리만 적용 가능
+  - box-sizing:border-box; : 크기를 아무리 설정해도 고정(안바뀜)
+- width, height
+  - px : 고정된 크기를 설정함
+  - % : 웹 브라우저나 부모의 크기에 비례하여 크기가 조절됨
+- rgba
+  - red green blue의 비율로 색상을 표현하는 방법
+  - 색상을 red 등의 이름이 아니라 숫자로도 지정 가능
+  - 알파채널로 투명도 조절 가능
+- **margin-left:auto; margin-right:auto; : 가운데 정렬**
+  - margin: 0 auto; : 가운데 정렬
+
