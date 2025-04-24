@@ -3,18 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7회차 -box-sizing과 박스정렬</title>
+    <title>Document</title>
+
+    <style>
+        * {box-sizing:border-box; margin:0;padding:0;}
+        body{
+            background-color: rgb(218, 218, 218);
+        }
+
+        h1{
+            font-weight:600;
+            font-size:20px;
+            margin-top:20px;
+        }
+
+        .box1{
+            width:300px; height: 1000px;
+            border:10px solid none;
+            margin:10px; padding:30px;
+            background-color:#ababab;
+            box-sizing:border-box;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .box2{
+            width:240px; height:180px;
+            border-radius: 20px;
+            background-color: aliceblue;
+            text-align: center;
+            margin: 0 auto;
+            cursor:pointer;
+            margin-bottom:10px;
+        }
+    </style>
+    </style>
 </head>
 <body>
-    <h1>box-sizing에 대해</h1>
-    <div class="one">
-    <h1>200x200</h1>
-    
-    <div class="two">
-    <h1>200x200</h1>
+        <h2>a태그를 사용하지 않고 박스가 클릭가능한 커서 모양으로 바뀌도록 하기</h2>
+        <h2 style="margin-top: -10px;">전체 박스 사이즈와 내부 콘텐츠 박스의 사이즈를 고려하여 중앙으로 배치되도록 할 것</h2>
+        <div class="box1">
+            <div class="box2">
+                <img style="margin:auto; width:200px; margin-bottom:-10px; margin-top:20px;" src="https://blog.kakaocdn.net/dn/CNxUY/btqw7dnElRU/HuVZgvpT6J8n4aEYFathEk/img.jpg">
+                <h1>네이버</h1>
+            </div>
+            <div class="box2">
+                <img style="margin:auto; width:200px; margin-bottom:-10px; margin-top:20px;" src="https://blog.kakaocdn.net/dn/bPWm4U/btqw8CtgkMu/pYxOoDLchCJHKrRkhElo7k/img.jpg">
+                <h1>카카오</h1>
+            </div>
+            <div class="box2">
+                <img style="margin:auto; width:150px; height:90px; margin-bottom:-10px; margin-top:10px;" src="https://file3.instiz.net/data/file3/2018/03/01/0/1/4/01445410a5238b219256d6f0919aa1de.png">
+                <h1>라인</h1>
+            </div>
+            <div class="box2">
+                <img style="margin:auto; width:120px; height:60px; margin-bottom:-10px; margin-top:20px;" src="https://mblogthumb-phinf.pstatic.net/20160902_124/ppanppane_14728003076370owh6_PNG/%C4%ED%C6%CE%B7%CE%B0%ED_%281%29.png?type=w800">
+                <h1>쿠팡</h1>
+            </div>
+            <div class="box2">
+                <img style="margin:auto; width:180px; height:60px; margin-bottom:-10px; margin-top:20px;" src="https://i.namu.wiki/i/4kTJGvpYAXvbT44b-ePbMSkdNuwLCFEUCwWPrIcEYX1LFnemJhrYl9LZd8wWriY-ADdCS3QhPlHNsrlnnWSSfQ.svg">
+                <h1>당근</h1>
+            </div>
+        </div>
 
-    <div class="three">
-    <h1>200x200</h1>
-    </div>
 </body>
 </html>
