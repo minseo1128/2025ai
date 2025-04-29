@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수행평가</title>
+    <style>
+            @font-face {
+                font-family: 'GowunDodum-Regular';
+                src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+        h1{
+            font-family: 'GowunDodum-Regular';
+            font-size: 30px;
+            color:rgb(141, 196, 59);
+            font-weight: 600;
+        }
+        
+        fieldset{
+            border-color: rgb(248, 248, 248);
+            border-radius: 20px;
+            margin:auto;
+            width:800px;
+        }
+
+        h4{
+            font-weight: 200;
+            color:darkgray;
+            font-size:16px;
+        }
+
+        .label{
+            font-weight: 500;
+            border-color: none;
+        }
+        
+        .label1{
+            font-weight: 200;
+
+        }
+
+        label{
+            margin-right:20px;
+        }
+
+        .purchase {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .purchase button {
+            width: 150px;
+            height: 50px;
+            margin: 15px;
+            font-size: 15pt;
+            background-color:rgb(141, 196, 59);
+            color: white;
+            border: none;
+            border-radius: 15px;}
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <h1> | 자신의 프로필을 설정해주세요</h1>
+            <h4>각각의 항목에 정보를 입력해주세요</h4>
+            <hr>
+            <br>
+            <label><span class="label">성명<br><input type="text" placeholder="성명 입력" style="border-top:none; border-left:none; border-right:none; "></label>
+            <br><br>
+            <label><span class="label">주소<br><input type="text" placeholder="주소 입력" style="border-top:none; border-left:none; border-right:none;"></label>
+            <br><br>
+            <label><span class="label">연락처<br><input type="text" placeholder="연락처 입력" style="border-top:none; border-left:none; border-right:none;"></label>
+
+            <br><br>
+            <label> 생년월일
+                <br>
+                <select name="연도" id=""  style="border:none; margin-right:17px;">
+                    <option value="0"> 연도 </option>
+                    <option value="0"> 2000 </option>
+                    <option value="1"> 2001 </option>
+                    <option value="2"> 2002 </option>
+                    <option value="0"> 2003 </option>
+                    <option value="1"> 2004 </option>
+                    <option value="2"> 2005 </option>
+                    <option value="2"> 2006 </option>
+                </select>
+                <select name="월" id="" style="border:none; margin-right:17px;">
+                    <option value="0"> 월 </option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12"> 12 </option>
+                </select>
+                <label><span class="label1" style="margin-left:13px;">  <input type="text" style="margin-left:9px; border-top:none; border-left:none; border-right:none;"> 일 </label>
+            </label>
+            <br>
+            <br>
+            <span class="label"> 성별<br></span>
+                <label><input type="radio" name="성별" value="man" >남 </label>
+                <label><input type="radio" name="성별" value="woman" style="margin-left:20px;">여</label>
+
+            <br>
+            <br>
+            <label><span class="label">이메일<br><input type="text" placeholder="이메일 입력"  style="border-top:none; border-left:none; border-right:none;"></label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h1> | 자신을 소개해 주세요</h1>
+            <h4>아래의 물음에 답하세요</h4>
+            <hr>
+            <br>
+            <span class="label"> 가장 마음에 드는 문구를 고르세요</span> <br><br>
+                <label><input type="radio" name="sen" value="1">어렵게 생각하지 말고 끝까지 하면 된다. 희망을 가지고 간절하게 하면 된다.</label><br>
+                <label><input type="radio" name="sen" value="2">신념을 가지면 어떤 어려움에도 흔들리지 않는다.</label><br>
+                <label><input type="radio" name="sen" value="3">"시계처럼 살아라."-이는 시계처럼 꾸준히 가라는 것이다. 시계처럼 시간도 지켜라.</label><br>
+                <label><input type="radio" name="sen" value="4">인생도 건너뛰기가 없고 순간 나는 비약도 없다.</label><br><br>
+            <span class="label"> 위 문구를 선택한 이유를 쓰세요</span> <br><br>
+            <textarea row="10" cols="100" placeholder="500자 이내"></textarea>
+            <div class="box">
+            </div>
+            <br>
+            <span class="label"> 자신의 진로 분야를 선택하세요</span> <br><br>
+            <label><input type="checkbox" name="d" value="p">프론트엔드</label>
+            <label><input type="checkbox" name="d" value="v">보안</label>
+            <label><input type="checkbox" name="d" value="b">백엔드</label>
+            <label><input type="checkbox" name="d" value="a">인공지능</label>
+            <label><input type="checkbox" name="d" value="h">해커</label>
+            <label><input type="checkbox" name="d" value="s">기타</label>
+            <br><br>
+            <span class="label"> 개발자가 되기 위한 자신의 공부 우선 순위</span> <br><br>
+            <label for="" >1. <input type="text"  style="border-top:none; border-left:none; border-right:none;"></label>
+            <label for="" >2. <input type="text"  style="border-top:none; border-left:none; border-right:none;"></label>
+            <label for="" >3. <input type="text"  style="border-top:none; border-left:none; border-right:none;"></label>
+        </fieldset>
+
+        
+        <div class="purchase">
+            <button type="submit" id="submit">제출</button>
+            <button type="reset" id="reset">초기화</button>
+            
+            
+        <script>
+
+            let 제출=document.querySelector("#submit")
+            제출.addEventListener("dbclick",function(){
+                })
+            let 초기화=document.querySelector("#reset")
+            제출.addEventListener("dbclick",function(){
+                })
+        </script>
+
+</body>
+</html>
