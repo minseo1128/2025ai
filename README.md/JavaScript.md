@@ -107,3 +107,5 @@
   - const 부모 = document.querySelector('#parent');
   - const 삭제대상 = document.querySelector('#child');
   - 부모.removeChild(삭제대상);
+
+# 
