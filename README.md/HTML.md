@@ -204,3 +204,36 @@
 - **margin-left:auto; margin-right:auto; : 가운데 정렬**
   - margin: 0 auto; : 가운데 정렬
 
+# overflow
+
+- overflow : 속성은 태그의 내용이 태그의 크기보다 넘칠 때 어떻게 처리할지를 지정하는 속성
+
+  - overflow: visible : 기본값/내용이 태그의 크기를 초과하더라도 그대로 표시
+  - overflow: hidden : 내용이 크기를 초과하는 부분은 잘림
+  - overflow: scroll : 내용이 크기를 초과하는 경우 스크롤바가 표시
+  - overflow: auto : 내용이 크기를 초과하는 경우 스크롤바가 표시O/크기를 초과하지 않는 경우는 스크롤바가 표시X
+
+# 블록레벨과 인라인레벨
+
+- 블록레벨
+  - 블록레벨 태그는 화면 전체의 가로폭을 차지하는 태그/각 태그를 작성할 때마다 새로운 줄에서 내용이 작성
+    - <div> : 시맨틱태그
+    - <p> : 문장이나 단락을 나타내는 태그
+    - <h1>~ <h6>
+    - <ul> / <ol> / <li>
+    - <table> / tr
+- 인라인레벨
+  - 인라인레벨 태그는 텍스트의 일부로 취급/내용 만큼만 영역을 차지/텍스트로 취급/다른 인라인레벨 태그와 같은 줄에 위치
+  - width/height/margin/padding 속성 적용X
+    - <a>
+    - <span>
+    - <img>
+    - <label> / <input> / <button>
+
+# display
+
+- 태그의 표시 방법을 지정
+  - display: block : 블록 레벨 요소로 지정/화면 전체의 가로폭을 차지, 새로운 줄에서 시작
+  - display: inline : 인라인 레벨 요소로 지정/내용만큼의 가로폭을 차지, 다른 요소와 같은 줄에 위치
+  - display: inline-block : 인라인 레벨 요소처럼 내용만큼의 가로폭을 차지, 블록 레벨 요소의 CSS를 적용할 수 있음
+  - display: none : 요소를 화면에서 숨김
