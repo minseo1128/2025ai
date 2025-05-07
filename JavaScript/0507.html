@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트</title>
+</head>
+<body>
+    <h1>키보드 이벤트</h1>
+    <script>
+        document.addEventListener("click",function(){
+            console.log("페이지 클릭함")
+        })
+
+        document.addEventListener("keydown",function(event){
+            console.log("키 누름")
+            console.log(event.key)
+        })
+
+        document.addEventListener("keyup",function(event){
+            console.log("키 뗌")
+            console.log(event.key)
+        })
+
+        // q를 누른 경우
+        document.addEventListener("keypress",function(e){
+            if(e.key=="q") {  // 누른 키가 q일 경우
+                console.log("q발동")
+            }
+        })
+        
+        // w를 누른 경우
+        document.addEventListener("keypress",function(e){
+            if(e.key=="w") {  // 누른 키가 w일 경우
+                console.log("w발동")
+            }
+        })
+        
+    </script>
+</body>
+</html>

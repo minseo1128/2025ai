@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습1 키보드 이벤트</title>
+
+    <style>        
+        .box1 {border:1px solid black;
+            width: 720px; height: 400px;
+            padding:20px;
+            display: inline-block;
+            text-align: center;
+            }
+        
+</style>
+</head>
+<body>
+    <h1>가고 싶은 해외여행지(a, s, d, f)</h1>
+    <div class="box1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBXypcxW7yjSfNtRn7FJPuocA7Afy9Ytd0g&s" style="width:500px; ">
+        <h1>불시 검사인가</h1>
+    </div>
+    <script>
+        let img=document.querySelector("img")
+        let h1=document.querySelector("h1")
+
+        document.addEventListener("keypress",function(e){
+
+            if(e.key=="a"){
+                img.setAttribute("src","https://i1.ruliweb.com/img/18/10/05/16643573e3b100c14.png")
+                h1.textContent="평범한 중2병이다"
+            }
+
+            else if(e.key=="s") { 
+                img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zIs5Zc1Myu2HSY7U4jfGtU-6wLBQj5MFrg&s")
+                h1.textContent="세계 제일 행복한 남자"
+            }
+
+            else if(e.key=="d") { 
+                img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4iZYFSrl1SheSSR4hdmyeA3dc-CxmQ3IdVw&s")
+                h1.textContent="네 놈들 서민의 잡초들과 어울릴 생각은 없다"
+            }
+
+            else if(e.key=="f") { 
+                img.setAttribute("src","hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRHl9na4yeeGM9UwkUeQVs6Np-LMYGCWcTQ&s")
+                h1.textContent="그건 모릉다"
+            }
+        })
+    </script>
+
+
+</body>
+</html>

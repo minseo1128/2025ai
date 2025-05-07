@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트 실습2</title>
+    
+    <style>        
+        .box1 {border:1px solid black;
+            width: 500px; height: 400px;
+            padding:20px;
+            display: inline-block;
+            text-align: center;
+            }
+        
+        span {font-weight: 900; font-size: 30pt;}
+        </style>
+</head>
+<body>
+
+    <h1>키보드 ← → 키로 슬라이드 전환</h1>
+    <div class="box1">
+        <span>←</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQ7GHM-izyhV9jjmsQbiyZ2vhH075DNThgQ&s" style="width:400px; ">
+        <span>→</span>
+        <h2 class="title">1. 돌솥 비빔밥</h2>
+
+    </div>
+    <script>
+
+        const 이미지 = document.querySelector("img")
+        const 장소 = document.querySelector(".title")
+        let 현재위치 = 1
+
+        document.addEventListener("keyup", function(event) {
+            console.log(event)
+            if(event.key == "ArrowLeft") {
+                if(현재위치 == 1 ) {
+                    현재위치 = 4
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4iZYFSrl1SheSSR4hdmyeA3dc-CxmQ3IdVw&s")
+                    장소.textContent = "4. 닭껍질 튀김"
+                }
+                else if(현재위치 == 2 ) {
+                    현재위치 = 1
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQ7GHM-izyhV9jjmsQbiyZ2vhH075DNThgQ&s")
+                    장소.textContent = "1. 돌솥 비빔밥"
+                }
+                else if(현재위치 == 3 ) {
+                    현재위치 = 2
+                    이미지.setAttribute("src", "https://i1.ruliweb.com/img/18/10/05/16643573e3b100c14.png")
+                    장소.textContent = "2. 냉면"
+                }
+                else if(현재위치 == 4 ) {
+                    현재위치 = 3
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zIs5Zc1Myu2HSY7U4jfGtU-6wLBQj5MFrg&s")
+                    장소.textContent = "3. 순대"
+                }
+            }
+            else if(event.key == "ArrowRight") {
+                if(현재위치 == 1 ) {
+                    현재위치 = 2
+                    이미지.setAttribute("src", "https://i1.ruliweb.com/img/18/10/05/16643573e3b100c14.png")
+                    장소.textContent = "2. 냉면"
+                }
+                else if(현재위치 == 2 ) {
+                    현재위치 = 3
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zIs5Zc1Myu2HSY7U4jfGtU-6wLBQj5MFrg&s")
+                    장소.textContent = "3. 순대"
+                }
+                else if(현재위치 == 3 ) {
+                    현재위치 = 4
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4iZYFSrl1SheSSR4hdmyeA3dc-CxmQ3IdVw&s")
+                    장소.textContent = "4. 닭껍질 튀김"
+                }
+                else if(현재위치 == 4 ) {
+                    현재위치 = 1
+                    이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQ7GHM-izyhV9jjmsQbiyZ2vhH075DNThgQ&s")
+                    장소.textContent = "1. 돌솥 비빔밥"
+                }
+            }
+        }) 
+
+    
+    </script>
+</body>
+</html>
+</body>
+</html>

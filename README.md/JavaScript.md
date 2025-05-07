@@ -108,4 +108,24 @@
   - const 삭제대상 = document.querySelector('#child');
   - 부모.removeChild(삭제대상);
 
-# 
+# 이벤트
+
+- 마우스
+  - click
+  - dblclick
+  - mouseover : 커서 올려둘 때
+  - mouseout : 커서 나갈 때
+  - mousedown : 마우스 누를 때
+  - mouseup : 마우스 뗄뗄 때
+- 키보드
+  - keydown : 누르는 것
+  - keypress : 누르는 것
+  - keyup : 떼는 것
+
+# 이벤트 변수
+
+- 이벤트 핸들러 함수가 호출될 때 전달되는 객체/이 객체를 사용하여 이벤트와 관련된 정보를 얻을 수 있음(console.log()로 출력)
+  - event.type : 발생한 이벤트의 종류를 나타냄
+  - event.target : 이벤트가 발생한 요소를 나타냄
+  - event.key : 눌린 키의 이름을 나타냄
+
