@@ -237,3 +237,8 @@
   - display: inline : 인라인 레벨 요소로 지정/내용만큼의 가로폭을 차지, 다른 요소와 같은 줄에 위치
   - display: inline-block : 인라인 레벨 요소처럼 내용만큼의 가로폭을 차지, 블록 레벨 요소의 CSS를 적용할 수 있음
   - display: none : 요소를 화면에서 숨김
+
+# 레이아웃 구성
+
+- display: inline-block : div 박스를 한 줄에 나열하면 박스를 글씨로 취급하므로 여백이 생김
+    - 해결 방법 : 부모의 font-size를 0으로 설정해야함

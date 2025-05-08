@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0508 박스모델</title>
+
+    <style>
+
+        .box{width: 200px; height: 200px; background-color: steelblue; border:3px solid black;}
+
+        ul {clear:both; }
+
+        li{
+            width:100px; height:50px; background-color: tomato; color:aliceblue; font-weight:900px;
+            float:left; text-align:center; margin:10px; 
+            border-radius: 15px; list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box" style="float:left">박스1</div>
+        <div class="box" style="float:left">박스2</div>
+        <div class="box" style="float:left">박스3</div>
+    </div>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+
+    <header>맨위
+        <div> 200 100 </div>
+        <div> 1000 100</div>
+    </header>
+    
+    <section> 섹션1 </section>
+
+    <section> 섹션2 
+        <div> 400 200 </div>
+        <div> 400 200 </div>
+        <div> 400 200 </div>
+    </section>
+
+    <footer> 맨 밑
+        <div>200</div>
+        <div>800 100</div>
+        <div>200</div>
+    </footer>
+
+
+</body>
+</html>

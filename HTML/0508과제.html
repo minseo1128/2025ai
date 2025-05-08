@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8회차 실습2 가로 와이어 프레임</title>
+    <style>
+        * { margin:0px; padding:0px; text-align: center;}
+        .all {margin:0 auto; width:1200px; height: 800px;}
+        header{width:1200px; height:100px; line-height: 100px;}
+
+        .box1{
+            background-color: aqua;
+            width:200px; height:100px;
+            float:left;}
+        .box2{
+            background-color:cornflowerblue;
+            width:1000px; height:100px;
+            float:left;}
+        .box3{
+            background-color:coral;
+            width:1200px; height:300px;
+            float:left;}
+        
+        .box4{
+            background-color:bisque;
+            width:400px; height:200px;
+            float:left;}
+        
+        .box5{
+            background-color:lightgreen;
+            width:400px; height:200px;
+            float:left;}
+        
+        .box6{
+            background-color:lightblue;
+            width:400px; height:200px;
+            float:right;}
+        
+        .box7 {            
+            background-color:mediumseagreen;
+            width:200px; height:100px;
+            float:left;}
+        
+        .box8 {            
+            background-color:hotpink;
+            width:800px; height:100px;
+            float:left;}
+            
+        .box9 {            
+            background-color:khaki;
+            width:200px; height:100px;
+            float:right;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="box1"><h1>200px 100px</h1></div>
+            <div class="box2"> <h1>1000px 100px</h1>  </div>
+        </header>
+
+        <section class="banner">
+            <div class="box3"><h1> 1200px * 300px <br>
+            모든 것의 margin, padding은 0으로</h1></div> 
+        </section>
+
+        <section id="contents">
+            <div class="box4"><h1>div 1 / 400px * 200px</h1></div>
+            <div class="box5"><h1>div 2 / 400px * 200px</h1></div>
+            <div class="box6"><h1>div 3 / 400px * 200px</h1></div>
+        </section>
+
+        <footer id="footer">
+            <div class="box7"><h1>200px</h1></div>
+            <div class="box8"><h1>800px * 100px</h1></div>
+            <div class="box9"><h1>200px</h1></div>
+
+        </footer>
+    </div>
+</body>
+</html>
