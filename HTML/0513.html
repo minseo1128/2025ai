@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>CSS개념(선택자 등등)</title>
+    <style>
+        .mom > div{background-color: skyblue; border:3px solid black} /* mom의 자식인 div를 선택하는 법 */
+
+        .mom div{color:red;} /* mom의 후손인 모든 div */
+
+        .box:hover{background-color: grey; color:springgreen; width: 300px;}
+        .child:hover{background-color: darkslateblue;}
+        .child:active {background-color: grey;}
+        
+        .box:nth-of-type(2n) {background-color: salmon;}
+        .box:nth-of-type(2n+1) {background-color: greenyellow;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="mom">
+        <div class="box">자식1</div>
+        <div class="box">자식2</div>
+        <div class="box">자식3</div>
+        <div class="box">자식4</div>
+        <div class="box">자식5</div>
+        <div class="box">자식6</div>
+        <section>
+            <div class="child">자식</div>
+            <div class="child">자식</div>
+            <div class="child">자식</div>
+        </section>
+    </div>
+</body>
+</html>
