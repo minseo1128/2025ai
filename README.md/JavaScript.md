@@ -129,3 +129,32 @@
   - event.target : 이벤트가 발생한 요소를 나타냄
   - event.key : 눌린 키의 이름을 나타냄
 
+# 리스트 [0514.html/수업자료 7.배열,객체,JSON 참고]
+
+- 배열
+  - 배열은 여러 개의 값을 순서대로 저장하는 자료형
+  - 각 값은 인덱스(index)라는 숫자로 구분/배열을 생성할 때는 대괄호([])를 사용
+  - 배열의 길이 : length (*개수를 셀 때 1부터 시작함)
+  - push() : 배열의 끝에 하나 이상의 요소를 추가/새 배열의 길이를 반환
+  - pop() : 배열의 마지막 요소를 제거/그 요소를 반환
+  - slice() : 원래 배열의 일부를 포함하는 새 배열을 반환
+  - splice() : 배열에서 요소를 추가하거나 제거
+  - concat() : 두 개 이상의 배열을 결합하여 새 배열을 반환
+  - indexOf() : 지정된 값의 첫 번째 발생 위치의 인덱스를 반환
+  - includes() : 배열이 지정된 값이 포함되어 있는지 여부를 결정하고 true 또는 false를 반환
+  - reduce() : 배열의 각 요소에 대해 리듀서 함수를 실행하여 단일 출력 값을 생성
+  - [예시] : const numbers = [1, 2, 3, 4, 5];
+             const fruits = ['apple', 'banana', 'cherry'];
+- 객체
+  - 객체는 데이터와 기능의 모음으로 이루어진 복합적인 자료형
+  - 중괄호({})를 사용하여 정의하며 중괄호 안에는 속성(property)과 메소드(method)를 포함할 수 있음
+  - [예시] : const person = {name: 'John', age: 30, greet: function() {console.log('Hello!');}};
+  - 반복문 
+    - for ... in
+    - [예시] : const person = {name: 'John', age: 30, gender: 'male'}; 
+               for (let key in person) {console.log(`${key}: ${person[key]}`);}
+
+# JSON
+
+- 데이터 교환을 위한 규격/객체 형식으로 데이터를 표현
+- JSON 데이터는 JavaScript에서 쉽게 생성할 수 있으며 다른 프로그래밍 언어에서도 쉽게 처리할 수 있어 통신에 자주 사용
