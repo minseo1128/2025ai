@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9회차 가상요소</title>
+    <style>
+        .title1::before{
+            content:"hot";
+            background-color: tomato; padding: 5px;
+            border-radius: 10px; margin-right: 10px;
+        }
+        .tile2::after{
+            content:"best";
+            background-color: aqua; padding:5px; 
+            border-radius: 10px; margin-right: 10px;
+        }
+        .title3::first-line{  /* 첫 줄 */
+            background-color: aqua; padding:5px; 
+            border-radius: 10px; margin-right: 10px;
+        }
+        .title4::first-letter{  /* 첫 글자 */
+            background-color: aqua; padding:5px; 
+            border-radius: 10px; margin-right: 10px;
+        }
+        .title::selection{
+            background-color:brown; color:white;
+        }
+    </style>
+</head>
+<body>
+    <p class="title1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum porro dolorum eum, vero repellendus itaque maxime ad blanditiis in placeat? Perspiciatis nobis voluptates magnam sed fugit et aspernatur incidunt quo.</p>
+    <p class="title2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro rerum, aliquid, odio nobis est dolores laudantium incidunt dolorem nihil fugiat asperiores molestias tempore possimus exercitationem saepe earum, quisquam sunt?</p>
+    <p class="title3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo exercitationem praesentium dicta, id nihil voluptates vero nobis odio ut, temporibus, minus fugit adipisci error reiciendis nostrum fuga in? Quasi, esse?</p>
+    <p class="title4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, reprehenderit ipsum sit, neque quia totam modi, tenetur consequuntur autem voluptatibus numquam repudiandae perspiciatis. Accusamus distinctio ratione, enim rem neque amet!</p>
+    <p class="title5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque reiciendis praesentium nesciunt placeat commodi non nisi, doloremque ullam sunt, et, voluptatum consectetur labore perferendis aperiam odio autem sit. Labore?</p>
+    <p class="title6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At nulla repudiandae neque dolor ipsa laborum. Pariatur aliquid corporis, quae obcaecati repellat molestiae repudiandae nesciunt ullam veritatis, odit sit quaerat sapiente.</p>
+
+
+</body>
+</html>

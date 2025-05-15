@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9회차 실습2</title>
+    <style>
+        
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap {width: 1200px; margin: 0 auto;}
+
+        body {background-color: #EEE;}
+
+        #header{
+            background-color: #FFF;
+            text-align: center;
+            width: 1200px; padding: 20px; border-radius: 30px;
+            margin-bottom: 20px;  margin-top: 20px;
+        }
+        #nav { padding: 20px; margin: 0 auto; text-align: center; }
+        .menu li {
+            display: inline-block;
+            border: 2px solid #888; border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu li:hover { border: 2px solid #067764; color: #067764; font-weight: 900;}
+        .menu li:active { background-color: #067764; color: #FFF; }
+
+        /* 섹션1 */
+        #section {
+            background-color: #FFF;
+            width: 1200px; height: 400px; padding: 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #EEE;
+            width: 570px; height: 340px; padding: 20px;
+            border-radius: 20px;
+        }
+        #con1 {float: left;}
+        #con1 li { font-size: 13pt; margin: 10px; }
+
+        .hot::before {
+            content: "hot";
+            font-size: 10pt;
+            background-color: rgb(255, 0, 0); color: white;
+            padding: 5px;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .new::before {
+            content: "new";
+            background-color: rgb(0, 4, 255); color: white;
+            font-size: 10pt;
+            padding: 5px;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .love::before {
+            content: "♥";
+            color:white; background-color: hotpink;
+            font-size: 10pt;
+            padding: 5px;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        #con2 {float: right;}
+        table td {padding: 8px;}
+        table tr:nth-of-type(odd) { background-color: rgb(255, 254, 218); }
+
+        footer {
+            width: 1200px; height: 400px; background-color: #FFF;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        #imgs .img {
+            float: left;
+            cursor: pointer;
+            width: 350px; margin: 25px;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <img height="50px" src="https://purepng.com/public/uploads/large/purepng.com-aecom-logologobrand-logoiconslogos-251519939890kydbk.png" alt="">
+            <h3>width 1200px / 아래 메뉴에 가상클래스 적용하기</h3>
+            <nav id="nav">
+                <ul class="menu">
+                    <li>메뉴</li>
+                    <li>공지사항</li>
+                    <li>갤러리</li>
+                    <li>마이페이지</li>
+                    <li>커뮤니티</li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="section">
+            <h3 style="text-align: center;">section 영역 width:1200px height:400px</h3>
+            
+            <div class="content" id="con1">
+                <h3>width:570px height:340px </h3>
+                <h1>세겨 둘 메세지</h1>
+                <ul>
+                    <li class="hot">지금 아니면 못 할 것을 하며 살아라.</li>
+                    <li class="hot">사람은 저마다 갈 길이 다르다. 자기 길을 가라.</li>
+                    <li class="new">남이 돕는다고 따라가면 자기 길 못 가고 얻을 것 못 얻는다. </li>
+                    <li class="hot">자랑할 것이 있게 행동해라</li>
+                    <li class="love">모든 삶의 이치는 동일하다. 1등 하려면 힘들다.</li>
+                    <li class="love">제대로 못 했어도 포기하지 말고 교정하면 되는 것도 있다.</li>
+                </ul>
+            </div>
+
+            <div class="content" id="con2">
+                <h3>width:570px height:340px </h3>
+                <table border="1" style="border-collapse: collapse;">
+                    <tbody><tr>
+                        <td>table 홀수 줄에 색깔 넣기</td>
+                        <td>table 홀수 줄에 색깔 넣기</td>
+                    </tr>
+                    <tr>
+                        <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                        <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                    </tr>
+                    <tr>
+                        <td>홀수는 odd</td>
+                        <td>홀수는 odd</td>
+                    </tr>
+                    <tr>
+                        <td>짝수는 even</td>
+                        <td>짝수는 even</td>
+                    </tr>
+                    <tr>
+                        <td>홀수 줄</td>
+                        <td>홀수 줄</td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </section>
+
+        <footer>
+            <h3 style="text-align: center;">section 영역 width:1200px height:400px</h3>
+            <h3 style="text-align: center;">div로 박스 3개 구현, width:350px</h3>
+            <div id="imgs">
+                <div class="img">
+                    <img width="100%" src="https://cdn.inflearn.com/public/courses/325969/cover/2868c757-5886-4508-a140-7cb68a83dfd8/325969-eng.png?f=avif&amp;w=420" alt="뷰">
+                    <p>스프링</p>
+                </div>
+                <div class="img">
+                    <img width="100%" src="https://cdn.inflearn.com/public/files/courses/334085/cover/01jp4nax3bvy337bvvfkc58563?f=avif&amp;w=420" alt="노드">
+                    <p>도커</p>
+                </div>
+                <div class="img">
+                    <img width="100%" src="https://cdn.inflearn.com/public/courses/327246/cover/16122223-0df0-4605-afa9-5d4eb2680db8/Screenshot-main.jpeg" alt="부트">
+                    <p>부트스트랩</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+</body>
+</html>
+
