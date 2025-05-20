@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 실습</title>
+    <style>
+        .parent{display:flex; background-color:rgb(225, 212, 191);
+        border:1px solid none; }
+
+        .box1{background-color: aqua;
+        border:1px solid none; width:200px; height: 100px;}
+
+        .box2{width: 400px; height:100px;align-items: center; display: flex;
+        margin-left: 120px;}
+
+        li{background-color:rgb(74, 138, 138);
+            list-style: none; width:100px;
+            text-align: center;
+            padding:20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11회차 실습2</title>
+    <style>
+        * {padding: 0; margin: 0;  box-sizing:border-box;}
+
+        li{list-style: none; }
+
+        
+        body{background-color: rgb(220, 215, 215);}
+
+        header{display: flex; align-items: center; justify-content: space-between; background-color: white;}
+
+        .menu{display: flex; text-align: center;}
+
+        a{list-style: none; font-weight: 700; color:royalblue; text-align: center;
+                   margin: 0px;  padding:17px;}
+
+        .menu a:hover { border: none; color: black; 
+                         background-color: rgb(193, 193, 193);
+                        cursor: pointer; display: flex; border-radius:16px;}
+                  
+        .side-menu b:hover { border: none; color: black; 
+                         background-color: rgb(193, 193, 193);
+                        cursor: pointer; display: flex; border-radius:16px;}
+        h1{font-size: 37px; margin-top: 13px; margin-left: 13px; margin-right: 20px; color:royalblue; font-weight: 700;}
+
+        section {display: flex; justify-content: space-between; }
+        
+        #left{width:15%; margin-left:60px; font-weight: 300;  margin-top:65px; line-height: 50px;}
+
+        #main{width:50%;}
+        
+        .content1{width:100%; padding: 30px; background-color: white; margin-bottom: 30px;
+                  box-shadow: 0px 5px 5px grey;}
+        #tit{font-size: 20px; margin-bottom: 20px;}
+        #na{margin-bottom: 20px;}
+
+        #right{width:20%; }
+
+        #guide{text-align: left;
+        border-bottom: 1px solid none;
+        margin-bottom: 20px; margin-bottom: 10px;}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>로고</h1>
+        <div class="menu">
+            <a herf="#" style="margin-right:50px;">게시판</a>
+            <a herf="#" style="margin-right:50px;">친구들</a>
+            <a herf="#" style="margin-right:50px;">피드</a>
+            <a herf="#" style="margin-right:40px;">즐겨찾기</a>
+        </div>
+        <div class="menu">
+            <a herf="#" style="margin-right:30px;">로그인</a>
+            <a herf="#" style="margin-right:20px;">회원가입</a>
+        </div>
+    </header>
+    <hr><br>
+    <section>
+        <span id="left">
+            <ul class="side-menu">
+                <li><b href="#">친구 찾기</b></li>
+                <li><b href="#">그룹</b></li>
+                <li><b href="#">저장됨</b></li>
+                <li><b href="#">페이지</b></li>
+                <li><b href="#">이벤트</b></li>
+                <li><b href="#">최신</b></li>
+                <li><b href="#">즐겨찾기</b></li>
+            </ul>
+        </span>
+        
+        <span id="main">
+            <div class="content1">
+                <h2 id="tit">오늘의 뉴스</h2>
+                <p id="na">도파민 중독에 대해</p>
+            </div>
+            <div class="content1">
+                <h2 id="tit">오늘의 뉴스</h2>
+                <p id="na">도파민 중독에 대해</p>
+            </div>
+        </span>
+
+        <span id="right">
+            <div class="guide">
+                <h2 class="title">가이드</h2>
+                <p>상단 헤더와 중앙 콘텐츠에 그림자</p>
+                <br>
+                <p>상단과 좌측 메뉴는 마우스가 변하며, 클릭 가능</p>
+            </div>
+            <br>
+            <hr>
+        </span>
+    </section>
+    
+</body>
+</html>

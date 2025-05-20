@@ -277,3 +277,26 @@
 - ::selection : 텍스트를 드래그하여 선택된 부분에 스타일을 적용
 - ::first-letter : 요소의 첫 번째 글자에 스타일을 적용
 - ::first-line : 요소의 첫 번째 줄에 스타일을 적용
+
+# flex [0520.html/11회차 flex 참고]
+
+- flex
+  - 태그들을 한 줄로 유연하게 배치하기 위한 방법
+  - 부모 밑의 자식 태그들을 한 방향(수평 혹은 수직)으로 정렬하고 간격을 조절할 때 사용
+    (*주로 부모에게 적용 - display:flex; : 부모한테 적용 -> 자식이 모두 정렬)
+- justify-content
+  - 가로 축에서 태그들을 어떻게 정렬할지 설정
+    - flex-start : item들을 왼쪽으로 정렬
+    - flex-end : item들을 오른쪽으로 정렬
+    - center : item들을 중앙으로 정렬
+    - space-between : item들 사이(between)에 고르게 간격을 두고 배치
+                      첫 번째 item은 시작점/마지막 item은 끝점에 정렬/중간에 있는 item들은 사이에 고르게 간격을 두고 배치
+    - space-around : item들의 주위(around)에 고르게 간격을 두고 배치 첫 번째와 마지막 item은 고정된 간격을 갖게 됨
+    - space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어줌 이 기능을 지원하지 않는 브라우저가 있음
+- align-items 
+  - gap : item 사이가 멀어짐(margin과 다름)
+  - stretch : flex item들을 cross axis에 맞게 늘림/기본값으로 설정되어 있음/cross axis의 높이를 자동으로 맞춰주는 역할
+  - flex-start : 시작점에 item들을 정렬
+  - flex-end : 끝점에 item들을 정렬
+  - center : 중앙에 item들을 정렬
+  - baseline : item들의 텍스트 베이스라인을 맞춤
