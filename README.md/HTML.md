@@ -289,8 +289,7 @@
     - flex-start : item들을 왼쪽으로 정렬
     - flex-end : item들을 오른쪽으로 정렬
     - center : item들을 중앙으로 정렬
-    - space-between : item들 사이(between)에 고르게 간격을 두고 배치
-                      첫 번째 item은 시작점/마지막 item은 끝점에 정렬/중간에 있는 item들은 사이에 고르게 간격을 두고 배치
+    - **space-between** : item들 한줄로 사이(between)에 고르게 간격을 두고 배치
     - space-around : item들의 주위(around)에 고르게 간격을 두고 배치 첫 번째와 마지막 item은 고정된 간격을 갖게 됨
     - space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어줌 이 기능을 지원하지 않는 브라우저가 있음
 - align-items 
