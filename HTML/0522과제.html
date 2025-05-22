@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백그라운드 이미지</title>
+    <style>
+        * { padding: 0px; margin:0px;}
+
+        body {background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC_faa0lUlACDqdv046WwNZ7rBGg8W2e-nug&s');
+              background-size: cover;
+        }
+        .text{align-items: center; justify-content: space-between; 
+              text-align:center; background-color: rgba(99, 167, 99, 0.297);}
+        
+        .main{width:900px; height: 900px; background-color: none; 
+              text-align: center; margin:0 auto; margin-top:20px; display: flex;}
+
+        .box {width:300px; height:300px; background-color: none; background-size: cover; background-position: 50% 50%;
+              margin:0;}
+    </style>
+</head>
+<body>
+    <div class="text">
+        <br>
+        <h1>display 활용하기</h1>
+        <h2>div태그를 3*3으로 배열하기</h2>
+        <h2>각각의 div 태그는 300px * 300px</h2>
+        <br>
+    </div>
+    <br><hr>
+    <div class="main">
+        <div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdo-JPiTAIkL1O-xrma_qIKzqKMqRXra8MQA&s');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdo-JPiTAIkL1O-xrma_qIKzqKMqRXra8MQA&s');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdo-JPiTAIkL1O-xrma_qIKzqKMqRXra8MQA&s');"></div>
+        </div>
+        <div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWg75DiqmZN2IbN5McKSl8wdtOjUnvYFK1TQ&s');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWg75DiqmZN2IbN5McKSl8wdtOjUnvYFK1TQ&s');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWg75DiqmZN2IbN5McKSl8wdtOjUnvYFK1TQ&s');"></div>
+        </div>
+        <div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYC873wTXSuit5_RR1ObaLO-z-dhY6d5I2waq7bqd8mKGrgXY6MC-N-QpeoC5wLbRUVCY&usqp=CAU');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYC873wTXSuit5_RR1ObaLO-z-dhY6d5I2waq7bqd8mKGrgXY6MC-N-QpeoC5wLbRUVCY&usqp=CAU');"></div>
+            <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYC873wTXSuit5_RR1ObaLO-z-dhY6d5I2waq7bqd8mKGrgXY6MC-N-QpeoC5wLbRUVCY&usqp=CAU');"></div>
+        </div>
+    </div>
+</body>
+</html>

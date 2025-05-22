@@ -255,7 +255,7 @@
 
 # CSS 가상 클래스 [0513.html 참고]
 
--특정 조건에서 스타일을 바꾸는 것것
+-특정 조건에서 스타일을 바꾸는 것
   - :hover : 마우스 커서가 올라가면 스타일 적용
   - :active : 마우스 클릭 중일 때 스타일 적용
   - :nth-child() : 모든 자식 중에서 지정된 순서의 태그를 선택
@@ -284,6 +284,7 @@
   - 태그들을 한 줄로 유연하게 배치하기 위한 방법
   - 부모 밑의 자식 태그들을 한 방향(수평 혹은 수직)으로 정렬하고 간격을 조절할 때 사용
     (*주로 부모에게 적용 - display:flex; : 부모한테 적용 -> 자식이 모두 정렬)
+
 - justify-content
   - 가로 축에서 태그들을 어떻게 정렬할지 설정
     - flex-start : item들을 왼쪽으로 정렬
@@ -291,7 +292,8 @@
     - center : item들을 중앙으로 정렬
     - **space-between** : item들 한줄로 사이(between)에 고르게 간격을 두고 배치
     - space-around : item들의 주위(around)에 고르게 간격을 두고 배치 첫 번째와 마지막 item은 고정된 간격을 갖게 됨
-    - space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어줌 이 기능을 지원하지 않는 브라우저가 있음
+    - space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어줌
+
 - align-items 
   - gap : item 사이가 멀어짐(margin과 다름)
   - stretch : flex item들을 cross axis에 맞게 늘림/기본값으로 설정되어 있음/cross axis의 높이를 자동으로 맞춰주는 역할
@@ -299,3 +301,19 @@
   - flex-end : 끝점에 item들을 정렬
   - center : 중앙에 item들을 정렬
   - baseline : item들의 텍스트 베이스라인을 맞춤
+
+# background-image
+
+- 속성을 사용하여 요소의 배경을 꾸밀 수 있음 (*속성 값으로는 색상, 이미지, 그라데이션 등이 가능)
+  - background-image : 요소의 배경에 이미지를 삽입합니다.
+    - [예시] : 선택자 {  background-image: url('이미지 경로');  }
+  - background-repeat : 배경 이미지의 반복 방법을 지정 (*no-repeat : 반복 안함)
+  - background-position : 배경 이미지의 위치를 지정 
+    - 가로% 세로% / px px  
+    - left center right/top center bottom
+  - background-size : 배경 이미지의 크기를 지정
+    - auto : 기본
+    - cover : 비율이 깨져도 채움
+    - contain : 비율을 유지함
+  - background-attachment : 배경 이미지의 스크롤 여부를 지정
+  - scroll : 디폴트/fixed : 스크롤해도 고정됨
