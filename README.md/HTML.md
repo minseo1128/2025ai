@@ -317,3 +317,19 @@
     - contain : 비율을 유지함
   - background-attachment : 배경 이미지의 스크롤 여부를 지정
   - scroll : 디폴트/fixed : 스크롤해도 고정됨
+
+# CSS Position 속성 [0527.html/0527과제.html/12회차 - position 참고]
+
+- CSS Position 속성은 HTML 요소의 위치를 옮기는 속성
+  - relative
+    - 현재 위치를 기준으로 이동시킴/이동 거리는 top, bottom, left, right 속성을 사용하여 설정할 수 있음
+    - Relative 속성으로 이동시킬 경우 이동한 위치를 기준으로 다른 요소들과의 상대적인 위치가 결정됨
+  - fixed 
+    - viewport를 기준으로 배치/스크롤을 내리더라도 고정된 위치에 남아 있음
+  - sticky
+    - 부모 컨테이너 내에서 위치가 고정되어 있다가 특정 위치까지 스크롤되면 사라짐
+    - 일정 위치까지  position: fixed;와 같이 동작하고 이후에 position: relative;와 같이 동작함
+  - Z-index
+    - Z-index 속성은 태그가 쌓이는 순서를 지정
+    - 만약 여러 태그가 겹쳐있다면 z-index 값이 더 큰 요소가 더 위에 쌓임
+    - z-index 값이 같다면 HTML 코드에서 먼저 나오는 요소가 더 위에 쌓임
