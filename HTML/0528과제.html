@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13회차 grid 실습1</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        head {
+            margin-bottom: -5px;
+        }
+
+        main {
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid none;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #wrap {
+            width: 940px;
+            height: 940px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 300px 300px 300px;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: rgb(0, 0, 0);
+            position: relative;
+        }
+
+        .box h1 {
+            font-size: 18pt;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 2px #000;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0px;
+        }
+
+        .box:hover {
+            background-color: rgba(255, 141, 141, 0.82);
+        }
+
+        .img {
+            width: 300px;
+            height: 300px;
+            opacity: 70%;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .box1 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box2 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box5 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box6 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box7 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box8 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+
+        .box9 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUroddizFQJVqmZzl0lnNWDFe5MunnXC-2yw&s");
+        }
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <h1>그리드를 이용한 실습</h1>
+        <h3>각각의 박스 : 300px * 300px, 그리드 여백 20px</h3>
+        <h3>글씨에 그림자 넣기</h3>
+        <h3>글씨 위치는 position을 이용해 조절할 수 있음</h3>
+        <h3>박스 전체를 클릭 가능한 영역으로 만들 것 + 박스에 마우스 올리면 밝아짐</h3>
+        <h3>배경이미지는 어둡게 처리. opacity 속성 활용할 것</h3>
+    </head>
+    <br>
+    <hr>
+    <br>
+    <main>
+        <div id="wrap">
+            <div class="box">
+                <div class="img box1"></div>
+                <a href="#">
+                    <h1> 자기를 가려서 그늘이 되게 하고 햇빛을 못 보게 한다</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box2"></div>
+                <a href="#">
+                    <h1>자기 생각을 받을 수 있다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box3"></div>
+                <a href="#">
+                    <h1>이 컴퓨터 사용자는 이말을 듣고 찔릴것이다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box4"></div>
+                <a href="#">
+                    <h1>사람들은 저마다 생각도 습관도 재능도 다르다. 그래서 자기 생각대로 대하면 서로 부딪힌다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box5"></div>
+                <a href="#">
+                    <h1>다른 사람들의 말에 요동하지 말고 각자의 방식으로 끝까지 행해야 한다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box6"></div>
+                <a href="#">
+                    <h1>행하는 자는 자꾸 얻으니 행하게 된다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box7"></div>
+                <a href="#">
+                    <h1>현실의 자기 삶 속에서만 살다 보니, 지난 날의 것들을 잊게 된다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box8"></div>
+                <a href="#">
+                    <h1>지금 당연히 누리는 것들 뒤에는 수많은 희생의 눈물과 고통이 있었다.</h1>
+                </a>
+            </div>
+            <div class="box">
+                <div class="img box9"></div>
+                <a href="#">
+                    <h1>모든 것은 누군가에겐 소중하다.</h1>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

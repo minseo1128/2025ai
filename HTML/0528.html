@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13회차 - Grid</title>
+    <style>
+        .container {width:900px; height:300px; border: 3px solid black;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr; 
+        
+                    }
+        .item {background-color: skyblue; border: 2px solid black;
+               }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="grid-column: 1/4;">아이템0</div>
+        <div class="item" style="order: 3;">아이템1</div>
+        <div class="item" style="order: 2;">아이템2</div>
+        <div class="item" style="order: 1;">아이템3</div>
+        <div class="item">아이템4</div>
+        <div class="item">아이템5</div>
+        <div class="item">아이템6</div>
+    </div>
+</body>
+</html>
