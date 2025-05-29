@@ -354,3 +354,30 @@
   - grid-template-columns  /  grid-template-rows : 그리드의 행이나 열의 크기를 정의
   - grid : 부모 요소에 지정하여 그리드를 생성
   - inline-grid : 그리드 컨테이너를 인라인 요소로 만들 수 있음/다른 인라인 요소와 함께 사용 가능/그리드 아이템을 인라인 수준에서 배치
+
+# Transform [0529.html/0529과제.html 참고]
+
+- HTML 요소의 위치, 크기, 회전, 기울기 등을 변경할 수 있는 속성
+- translate() : 요소의 위치를 변경 가능/x축과 y축 방향으로 이동할 거리를 지정/다음과 같은 코드를 작성하면 x축으로 50px, y축으로 100px 이동
+- rotate() : 요소를 회전시킴
+    - [예시] : 다음과 같은 CSS 코드를 작성하면 요소가 45도 회전됨
+      transform: rotate(45deg);
+- scale() : 요소의 크기를 변경
+  - [예시] : 다음과 같은 CSS 코드를 작성하면 요소가 2배 확대됨
+    transform: scale(2);
+- skew() : 요소를 기울임
+  - [예시] : x축 방향으로 30도, y축 방향으로 -10도로 기울어짐
+    transform: skew(30deg, -10deg);
+
+# Transition [0529.html/0529과제.html 참고]
+
+- HTML 요소의 상태 변화를 부드럽게 애니메이션 효과로 줄 수 있음
+- (생략가능) transition-property : 적용할 CSS. 생략하면 모든 CSS에 적용
+- (필수) transition-duration : Transition 지속시간
+- (생략가능) transition-timing-function : 트랜지션 속도 곡선
+- (생략가능) transition-delay : 몇 초 뒤에 시작할 지 (쓰기 나름이지만 잘 안 씀)
+    - ease : 기본값/느리게 시작되고 빠르게 끝남
+    - linear : 일정한 속도로 진행됨
+    - ease-in : 천천히 시작되고 빠르게 끝남
+    - ease-out : 빠르게 시작되고 천천히 끝남
+    - ease-in-out : 천천히 시작되고 천천히 끝남

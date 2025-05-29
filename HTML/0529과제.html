@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14회차 실습1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .main {
+            width: 950px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        footer {
+            width: 950px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .img1 {
+            width: 300px;
+            height: 200px;
+            background-color: none;
+            overflow: hidden;
+        }
+
+        .img1 img {
+            width: 300px;
+            height: 200px;
+        }
+
+        .text {
+            width: 300px;
+            height: 200px;
+            margin-top: 15px;
+            background-color: rgba(0, 0, 0, 0.607);
+            color: white;
+            opacity: 0;
+            transition: 0.5s all;
+        }   
+
+        .img1:hover .text {
+            transform: translate(0px, -200px);
+            opacity: 1;
+        }
+    </style>
+
+<body>
+    <h1>마우스 올리면 상세 설명 표시</h1>
+    <div class="main">
+
+        <div class="img1"><img src="https://i.pinimg.com/736x/b7/ba/32/b7ba322dfc569d38c049f943c9d47122.jpg">
+            <div class="text">
+                <h2>던말릭이랑 밥 먹는 민겸</h2>
+                <p>╰(*°▽°*)╯</p>
+            </div>
+        </div>
+
+        <div class="img1"><img src="https://i.pinimg.com/736x/ce/00/28/ce00285679a9b5f9f821adbc576f68c8.jpg">
+            <div class="text">
+                <h2>토일이랑 키 차이 나는 민겸</h2>
+                <p>ϵ( ‘Θ’ )϶</p>
+            </div>
+        </div>
+
+        <div class="img1"><img src="https://i.pinimg.com/736x/43/9a/25/439a2589217109d15e3e1aa297bd50a8.jpg">
+            <div class="text">
+                <h2>명태랑 안닮은 민겸</h2>
+                <p>(ʘ ͜ʖ ʘ)</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    
+    <h1>팁</h1>
+    <footer>
+        <div class="img1"><img src="https://i.pinimg.com/736x/1d/f1/00/1df1005b5e4405f3019727ae49a79645.jpg">
+            <div class="text">
+                <h2>벌써 흰 머리 난 민겸</h2>
+                <p>ಥ_ಥ</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
