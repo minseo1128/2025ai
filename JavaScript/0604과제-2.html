@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>주문서</h1>
+    <h3>먹고 싶은 메뉴를 선택합니다 </h3>
+
+    <label for=""><input type="checkbox" value="치킨" name="ya">치킨 16,000</label>
+    <br><br>
+    <label for=""><input type="checkbox" value="초밥" name="ya">초밥 20,000</label>
+    <br><br>
+    <label for=""><input type="checkbox" value="순대" name="ya">순대 5,000</label>
+
+    <hr>
+
+    <h2 id="money">가격 : 0</h2>
+
+    <script>
+        const ya = document.querySelectorAll("input")
+        const money = document.querySelector("#money")
+        let price = 0
+
+        ya.forEach(function (k) {
+            k.addEventListener("change", function () {
+                if (this.checked == true) {
+                    if (this.value == "치킨") {
+                        price = price + 16000
+                    }
+                    else if (this.value == "초밥") {
+                        price = price + 20000
+                    }
+                    else if (this.value == "순대") {
+                        price = price + 5000
+                    }
+                }
+                else {
+                    if (this.value == "치킨") {
+                        price = price - 16000
+                    }
+                    else if (this.value == "초밥") {
+                        price = price - 20000
+                    }
+                    else if (this.value == "순대") {
+                        price = price - 5000
+                    }
+                }
+                money.textContent = "가격 :" + price
+                console.log(this.name)
+                console.log("name = " + this.getAttribute("name"))
+                console.log(this.value)
+                console.log("value = " + this.getAttribute("value"))
+                console.log(this.id)
+                console.log("id = " + this.getAttribute("id"))
+            })
+        })
+    </script>
+
+</body>
+</html>

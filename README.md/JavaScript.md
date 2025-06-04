@@ -169,6 +169,18 @@
   - 함수가 실행을 완료하고 값을 외부에 반환할 때 사용
   - [예시] : function add(x, y) {return x + y;} - return은 함수가 x와 y를 더한 값을 반환하고 실행을 종료함을 나타냄
 
-# 매개변수
+# 이벤트 발생 객체 [0604.html 참고]
 
-- 
+- event.target 은 이벤트가 실제로 발생한 요소를 반환
+- [예시] : 아래와 같이 버튼을 클릭할 때 event.target은 button 태그를 가리킴
+  <div>
+  <button>Click me</button>
+  </div>
+
+  <script>
+	  document.querySelector('div').addEventListener('click', function(event) {
+      console.log('currentTarget:', event.currentTarget); // div 요소를 참조
+      console.log('target:', event.target); // button 요소를 참조
+    });
+  </script>
+- event.currentTarget : 이벤트 캡처링 단계에서는 이벤트의 최상위 태그를 가리키며, 이벤트 버블링 단계에서는 이벤트가 발생한 태그를 가리킵니다. 버튼을 클릭하면 `event.currentTarget`는 `div` 를 가리킵니다.
