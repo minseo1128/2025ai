@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체2 - number, string, Math</title>
+</head>
+<body>
+    <script>
+        let 숫자 = 195.66231
+        console.log(숫자.toFixed(3))
+        
+        let 문자 = "박태준 수료금지 발로란트 티어 아이언3 잘 좀 해봐라"
+        console.log(문자)
+        console.log("문자열의 길이 : 문자.length :",문자.length)
+        console.log("슬라이스 문자.slice(시작, 끝) :",문자.slice(0,3))
+        console.log("슬라이스 문자.slice(시작, 끝) :",문자.slice(9,21))
+        console.log(문자.split(" "))
+
+        console.log(문자.indexOf("말파이트"))
+
+        console.log(Math.round(177.94))
+        console.log(Math.floor(177.94))
+        console.log(Math.ceil(177.22))
+
+        console.log("랜덤",Math.floor(Math.random()))  // 0 ~ 0.99999
+        console.log("랜덤",Math.floor(Math.random()*10))  // 0 ~ 9.99999
+        console.log("랜덤",Math.floor(Math.random()*10+1))  // 0 ~ 10.99999
+
+        console.log(5**2)
+        console.log(Math.pow(5,2))
+        console.log(Math.sqrt(36))  // rt : root.
+    </script>
+</body>
+</html>

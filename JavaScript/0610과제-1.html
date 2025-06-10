@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9회차 실습1 - string의 split 활용</title>
+    <style>
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>입대일은 만 19세가 되는 날을 기준</h1>
+    <p>------------------------가이드: 아래 내용 참고------------------------</p>
+    <h2>2006년생 및 그 이전 : 무조건 입대 가능</h2>
+    <h2>2007년생 : 6월 이전 출생자는 무조건 입대 가능</h2>
+    <h2>2007년 6월 생 : 10일 이전 출생자는 입대 가능</h2>
+
+    <hr>
+
+    <input type="text" class="birth" placeholder="양식: 2001.1.1">
+    <button>계산</button>
+
+    <script>
+        const 버튼 = document.querySelector("button");
+        const 생년월일 = document.querySelector(".birth");
+
+        버튼.addEventListener("click", () => {
+            const 값 = 생년월일.value.trim();
+            if (!값 || !값.includes(".")) {
+                alert("생년월일을 '2001.1.1' 형식으로 입력해주세요.");
+                return;
+            }
+
+            const 분할 = 값.split(".");
+            const 출생년 = Number(분할[0]);
+            const 출생월 = Number(분할[1]);
+            const 출생일 = Number(분할[2]);
+
+            if (isNaN(출생년) || isNaN(출생월) || isNaN(출생일)) {
+                alert("올바른 숫자로 입력해주세요.");
+                return;
+            }
+
+            if (출생년 <= 2006) {
+                console.log("입대 가능");
+            } else if (출생년 === 2007) {
+                if (출생월 < 6) {
+                    console.log("입대 가능");
+                } else if (출생월 === 6) {
+                    if (출생일 <= 10) {
+                        console.log("입대 가능");
+                    } else {
+                        console.log("곧 입대");
+                    }
+                } else {
+                    console.log("곧 입대");
+                }
+            } else {
+                console.log("입대 불가능");
+            }
+        });
+    </script>
+</body>
+
+</html>

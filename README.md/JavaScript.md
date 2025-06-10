@@ -184,3 +184,104 @@
     });
   </script>
 - event.currentTarget : 이벤트 캡처링 단계에서는 이벤트의 최상위 태그를 가리키며, 이벤트 버블링 단계에서는 이벤트가 발생한 태그를 가리킵니다. 버튼을 클릭하면 `event.currentTarget`는 `div` 를 가리킵니다.
+
+# 객체2 - number, string, Math [0610.html 참고]
+
+- 생성자 함수를 사용한 객체 생성
+  - 객체를 생성자 함수를 사용하여서 생성할 수도 있음
+  - [예시] :
+      // 생성자 함수를 사용하여 객체 생성
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.greet = function() { console.log('Hello!'); }
+      }
+      const person = new Person('John', 30);
+
+- 자주 사용하는 메소드
+  - 숫자.toFixed
+    - toFixed() 메소드는 숫자 타입을 소수점 아래 지정된 자릿수만큼 반올림하여 반환
+    - 원본 데이터를 수정X / 새로운 문자열 값을 반환
+    - [예시] : 3.1415926을 toFixed(2)로 호출하면 "3.14"가 반환됨
+        let num = 3.1415926;
+        let result = num.toFixed(2);
+        console.log(result); // 출력 결과: "3.14"
+    - 반환하는 값은 문자열
+    - toFixed() 메소드는 소수점 이하의 자릿수를 지정하지 않으면 기본값으로 0을 사용
+
+  - String
+    - string.length
+      - 문자열의 길이를 반환
+      - [예시] :
+          const str = "Hello, world!";
+          console.log(str.length); // 출력 결과: 13
+    - string.slice(start, end)
+      - 문자열의 일부분을 추출하여 반환
+      - start 인덱스는 추출을 시작할 위치, end 인덱스는 추출을 끝낼 위치 / 추출을 끝낼 위치는 출력에 포함 X
+      - end 인덱스는 생략 가능하며 생략할 경우 문자열의 끝까지 추출
+      - [예시] :
+          const str = "Hello, world!";
+          console.log(str.slice(0, 5)); // 출력 결과: Hello
+          console.log(str.slice(7, 12)); // 출력 결과: world
+          console.log(str.slice(7)); // 출력 결과: world!
+    - string.trim()
+      - 문자열의 앞뒤 공백을 제거 / 앞뒤의 공백만 제거되며 중간에 있는 공백은 제거 X
+      - 원본 데이터를 수정하지 않으며 새로운 문자열 값을 반환
+      - [예시] :
+          const str = "    Hello, world!     ";
+          console.log(str.trim()); // 출력 결과: "Hello, world!"
+    - string.split(separator, limit)
+      - 문자열을 분할하여 배열로 반환 
+      - separator는 구분자 / 문자열을 나누기 위한 기준
+      - limit는 생략가능 / 반환할 배열 요소의 최대 개수를 지정 / 생략하면 모든 구분자를 기준으로 문자열이 분할
+      - [예시] :  
+          const str = "Hello, world!";
+          const arr = str.split(", ");
+          console.log(arr); // 출력 결과: ["Hello", "world!"]
+    - tring.indexOf(searchValue, fromIndex)
+      - 문자열에서 searchValue가 처음 발견된 인덱스를 반환 / 만약 searchValue가 발견되지 않으면 -1을 반환
+      - fromIndex는 생략 가능하며 검색을 시작할 인덱스를 지정 / 생략하면 문자열의 처음부터 시작
+      - indexOf() 메소드는 대소문자를 구분
+      - [예시] :
+          const str = "Hello, world!";
+          console.log(str.indexOf("world")); // 출력 결과: 7
+          console.log(str.indexOf("JavaScript")); // 출력 결과: -1
+  
+  - Math 객체
+    - 자바스크립트 Math 객체는 수학적인 연산을 수행하는 함수들을 제공
+    - Math.round()
+      - 소수점 첫째 자리에서 반올림한 정수를 반환
+      - [예시] :
+          let roundValue = Math.round(3.14); // 3
+    - Math.floor()
+      - 인자로 전달된 숫자를 내림한 정수를 반환
+      - [예시] :
+          let floorValue = Math.floor(3.14); // 3
+    - Math.ceil()
+      - 인자로 전달된 숫자를 올림한 정수를 반환
+      - [예시] :
+          let ceilValue = Math.ceil(3.14); // 4
+    - Math.random()
+      - 0이상 1 미만의 난수(0~0.9999999999999999(1 미만))를 반환 / 매번 실행할 때마다 다른 값을 반환
+      - [예시] :
+          let 랜덤 = Math.floor(Math.random()*10); 
+          // Math.random() * 10으로 0 이상 10 미만의 값 얻음
+          // Math.floor() 메소드는 소수점 이하를 버리므로 0~9의 정수가 됨.
+          ​
+          // 원하는 범위의 최솟값이 1이라면, 다음과 같이 계산합니다.
+          let 랜덤 = Math.floor(Math.random()*10) + 1; // +1을 추가하여 범위의 최솟값을 1로 설정
+    - Math.abs()
+      - 숫자의 절대값을 반환
+      - [예시] :
+          let absValue = Math.abs(-5); // 5
+    - Math.max() / Math.min()
+      - Math.max() 메소드는 숫자 중 가장 큰 값 / Math.min() 메소드는 숫자 중 가장 작은 값을 반환
+      - [예시] :
+          let maxValue = Math.max(1, 2, 3, 4, 5); // 5
+          let minValue = Math.min(1, 2, 3, 4, 5); // 1    ​
+    - Math.pow()
+      - 거듭제곱 값 반환
+      - [예시] : let powValue = Math.pow(2, 3); // 8   ​
+    - Math.sqrt()
+      - 숫자의 제곱근 반환
+      - [예시] : let sqrtValue = Math.sqrt(16); // 4

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9회차 실습 - Math 객체로 로또 번호 만들기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .box1 {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+            background-color: rgb(169, 228, 187);
+            height: 118px;
+        }
+
+        .box1 > div {
+            font-size: 26px;
+            width:200px; 
+            height: 35px;
+        }
+
+        .box1 p {
+            background-color: rgb(127, 233, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <br><br>
+    <h1>로또 당첨 번호</h1>
+    <br><br>
+    <h2>1~45의 숫자 범위 6개 뽑기</h2>
+    <h2>중복된 숫자는 입력되지 않음</h2>
+    <br><br>
+    <div class="box1">
+        <div><p>1번</p><span class="num"></span></div>
+        <div><p>2번</p><span class="num"></span></div>
+        <div><p>3번</p><span class="num"></span></div>
+        <div><p>4번</p><span class="num"></span></div>
+        <div><p>5번</p><span class="num"></span></div>
+        <div><p>6번</p><span class="num"></span></div>
+    </div>
+
+<script>
+        function generateRandomLottoNumbers() {
+            const numbers = [];
+            while (numbers.length < 6) {
+                const randomNumber = Math.floor(Math.random() * 45) + 1;
+                if (!numbers.includes(randomNumber)) { 
+                    numbers.push(randomNumber); 
+                }
+            }
+            return numbers;
+        }
+
+        const 생성한번호 = generateRandomLottoNumbers();
+        let i = 0
+        번호칸 = document.querySelectorAll(".num")
+        번호칸.forEach( (e) => {
+            e.textContent = 생성한번호[i]
+            i = i+1
+        });
+        console.log("로또 번호:", 생성한번호);
+    </script>
+</body>
+
+</html>
