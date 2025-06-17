@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        #header {
+            height: 100px; padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            background-color: teal; color: #FFF;
+        }
+        #weather-select { width: 200px; height: 30px; border-radius: 5px; border: none; }
+
+        #main { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 500px; }
+        #location {font-size: 20pt; color: teal; text-align: center;}
+        #temperature {font-size: 24pt;}
+        #temperature > span {font-size: 50pt; margin-right: 10px;}
+        #image img {max-width: 100px;}
+        #detail span {
+            padding: 10px; border-radius: 20px; 
+            background-color: teal; color:#FFF;
+        }
+        #loading {display: none;}
+
+    </style>
+</head>
+<body>
+<body>
+    <div id="wrap">
+
+        <header id="header">
+            <h1>날씨검색</h1>
+            <select id="weather-select">
+                <option value="seoul">서울</option>
+                <option value="busan">부산</option>
+                <option value="incheon">인천</option>
+                <option value="new york">뉴욕</option>
+                <option value="barcelona">바르셀로나</option>
+                <option value="osaka">오사카</option>
+            </select>
+        </header>
+
+        <section id="main">
+            <div id="info">
+                <p id="location">??</p>
+                <p id="temperature"> <span>?</span>˚C</p>
+            </div>
+            <div id="image">
+                <img src="http://image.auction.co.kr/itemimage/1f/c3/f4/1fc3f42671.jpg" alt="날씨기호">
+            </div>
+            <div id="detail">
+                <span id="feel">체감<span>?</span>˚C</span>
+                <span id="wind">초속<span>?</span>m/s</span>
+            </div>
+            <img id="loading" src="" alt="로딩">
+        </section>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const API_KEY = "47c44037a668e7569c5d4687b724255e"
+
+        const 도시명 = document.querySelector("#location")
+        const 기온 = document.querySelector("#temperature span")
+        const 아이콘 = document.querySelector("#image img")
+        const 체감온도 = document.querySelector("#feel span")
+        const 풍속 = document.querySelector("#wind span")
+
+        let 선택 = document.querySelector("#weather-select")
+        선택.addEventListener("change", function(event) {
+            console.log(event.target.value)
+            getWeather(event.target.value)
+        })
+
+        function getWeather(city="seoul") {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+            .then(res => {
+                console.log(res)
+                도시명.textContent = res.data.name
+                기온.textContent = (res.data.main.temp - 273.15).toFixed(1)
+                아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`)
+                체감온도.textContent = (res.data.main.feels_like-273.15).toFixed(1)
+                풍속.textContent = res.data.wind.speed
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        }
+
+    </script>
+
+</body>
+</body>
+</html>

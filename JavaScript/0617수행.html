@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 심민서</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        @font-face {
+            font-family: 'GowunDodum-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 100%;
+            height: 1000px;
+            background-image: url('https://images.unsplash.com/photo-1490814525860-594e82bfd34a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUVCJThCJUFDJTIwJUVCJUIwJUIwJUVBJUIyJUJEJUVEJTk5JTk0JUVCJUE5JUI0fGVufDB8fDB8fHww');
+            background-size: cover;
+            position: relative;
+            color: white;
+            font-family: 'GowunDodum-Regular';
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #info {
+            margin-top: -50px;
+            margin-bottom: 10px;   
+        }
+
+        #weather-select {
+            width: 200px;
+            height: 30px;
+            border: none;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 40px;
+            background-color: rgba(140, 140, 140, 0.534);
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            margin-top: 190px;
+            margin-left: 200px;
+            height: 600px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.534);
+            text-align: center;
+            padding: 14px;
+            padding-top: 270px;
+        }
+
+
+        .default {
+            background-image: url('https://source.unsplash.com/v9bnfMCyKbg/1600x900');
+            background-size: cover;
+        }
+
+        .clear {
+            background-image: url('https://source.unsplash.com/PEm_sLmJT-w/1600x900');
+            background-size: cover;
+        }
+
+        .clouds {
+            background-image: url('https://source.unsplash.com/78wDBw9ajul/1600x900');
+            background-size: cover;
+        }
+
+        .thunderstorm {
+            background-image: url('https://source.unsplash.com/jh2KTqHLMjE/1600x900');
+            background-size: cover;
+        }
+
+        .rain {
+            background-image: url('https://source.unsplash.com/22x7fFpl_8/1600x900');
+            background-size: cover;
+        }
+
+        .snow {
+            background-image: url('https://source.unsplash.com/2V30zQZAIPs/1600x900');
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <section class="main">
+            <div id="info">
+                <p id="location">지역 </p><br>
+                <p id="temperature">온도 <span></span>˚C</p><br>
+            </div>
+            <div id="image">
+                <img src="https://cdn-icons-png.flaticon.com/128/7059/7059294.png" alt="날씨기호">
+            </div>
+            <br>
+            <div id="detail">
+                <span id="feel">체감온도 <span></span> ˚C</span><br><br>
+                <span id="wind">풍속 <span></span> m/s</span><br><br>
+                <span id="humi">습도 <span></span> %</span>
+            </div>
+
+            <select id="weather-select">
+                <option value="seoul">Seoul</option>
+                <option value="new york">NewYork</option>
+                <option value="barcelona">barcelona</option>
+                <option value="osaka">Osaka</option>
+            </select>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            const API_KEY = "47c44037a668e7569c5d4687b724255e"
+
+            const 도시명 = document.querySelector("#location")
+            const 기온 = document.querySelector("#temperature span")
+            const 아이콘 = document.querySelector("#image img")
+            const 체감온도 = document.querySelector("#feel span")
+            const 풍속 = document.querySelector("#wind span")
+            const 습도 = document.querySelector("#humi span")
+
+            let 선택 = document.querySelector("#weather-select")
+            선택.addEventListener("change", function (event) {
+                console.log(event.target.value)
+                getWeather(event.target.value)
+            })
+
+            function getWeather(city = "seoul") {
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+                    .then(res => {
+                        console.log(res)
+                        도시명.textContent = res.data.name
+                        기온.textContent = (res.data.main.temp - 273.15).toFixed(1)
+                        아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`)
+                        체감온도.textContent = (res.data.main.feels_like - 273.15).toFixed(1)
+                        풍속.textContent = res.data.wind.speed
+                        습도.textContent = res.data.main.humidity
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            }
+
+            function changeIcon(data) {
+                let weather = data.weather[0]['main'];
+
+                html.classList.remove(...html.classList);
+                descriptionIcon.classList.remove(...descriptionIcon.classList);
+
+                if (weather == 'Clouds') {
+                    html.classList.add('weather-clouds');
+                    descriptionIcon.classList.add('fas', 'fa-cloud-sun');
+                } else if (weather == 'Clear') {
+                    html.classList.add('weather-clear');
+                    descriptionIcon.classList.add('fas', 'fa-sun');
+                } else if (weather == 'Thunderstorm') {
+                    html.classList.add('weather-thunderstorm');
+                    descriptionIcon.classList.add('fas', 'fa-bolt');
+                } else if (weather == 'Drizzle') {
+                    html.classList.add('weather-thunderstorm');
+                    descriptionIcon.classList.add('fas', 'fa-water');
+                } else if (weather == 'Rain') {
+                    html.classList.add('weather-rain');
+                    descriptionIcon.classList.add('fas', 'fa-umbrella');
+                } else if (weather == 'Snow') {
+                    html.classList.add('weather-snow');
+                    descriptionIcon.classList.add('fas', 'fa-snowflake');
+                } else if (weather == 'Atmosphere') {
+                    html.classList.add('weather-clouds');
+                    descriptionIcon.classList.add('fas', 'fa-smog');
+                } else {
+                    html.classList.add('weater-default');
+                    descriptionIcon.classList.add('fas', 'fa-cloud');
+                }
+            }
+
+        </script>
+    </header>
+</body>
+
+</html>
