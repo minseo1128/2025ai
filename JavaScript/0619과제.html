@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11회차 실습</title>
+    <style>
+        .main {
+            display: flex;
+            gap: 240px;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 400px;
+            border: 1px solid none;
+            padding: 0px;
+        }
+
+        .box img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Shopping Cart</h1>
+    <p>forEach 함수를 사용할 것</p>
+    <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+
+    <div class="main">
+        <div class="box">
+            <h1>충만치킨 1마리</h1>
+            <img src="https://i.pinimg.com/736x/a3/0c/04/a30c0437225b7cd3170dcb588df88f0f.jpg">
+            <p class="price" data-price="21000">Price: \<span>21000</span></p>
+            <div class="quan">Quantity : <input type="number" value="1" class="quantity-input"></div>
+        </div>
+
+        <div class="box">
+            <h1>쌀통닭 1마리</h1>
+            <img src="https://i.pinimg.com/736x/da/40/5b/da405be4343e9f4f11569644e55f4a3a.jpg">
+            <p class="price" data-price="21000">Price: \<span>17000</span></p>
+            <div class="quan">Quantity : <input type="number" value="1" class="quantity-input"></div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="main">
+        <div class="box">
+            <h1>옥야식당 국밥</h1>
+            <img src="https://i.pinimg.com/736x/dd/e5/a0/dde5a0a9a24e076efcc2865d2e71bd0d.jpg">
+            <p class="price" data-price="21000">Price: \<span>10000</span></p>
+            <div class="quan">Quantity : <input type="number" value="1" class="quantity-input"></div>
+        </div>
+
+        <div class="box">
+            <h1>청하감자탕</h1>
+            <img src="https://i.pinimg.com/736x/63/5c/59/635c596fe0e7c7557c68a5b68a07b89f.jpg">
+            <p class="price" data-price="21000">Price: \<span>8000</span></p>
+            <div class="quan">Quantity : <input type="number" value="1" class="quantity-input"></div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <h2>Total: <span id="total"></span></h2>
+
+    <script>
+        calculateTotal();
+
+        function calculateTotal() {
+            const items = document.querySelectorAll('.box');
+            let total = 0;
+
+            items.forEach(box => {
+                const price = parseInt(box.querySelector('.price span').textContent);
+                const quantity = parseInt(box.querySelector('.quan input').value);
+
+                total += price * quantity;
+            });
+
+
+            document.querySelector('#total').textContent = total;
+        }
+
+
+        document.querySelectorAll('.quan input').forEach(input => {
+            input.addEventListener('input', calculateTotal);
+        });
+    </script>
+</body>
+
+</html>

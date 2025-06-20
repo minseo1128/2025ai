@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. DOM, 자주쓰는 함수1(반복문 함수, 타이머 함수)</title>
+    <style>
+        .box {width: 100px; height: 100px; background-color: skyblue; border: 3px solid black;}
+    </style>
+</head>
+<body>
+    <div class = "box">박스1</div>
+    <div class = "box">박스2</div>
+    <div class = "box">박스3</div>
+    <div class = "box">박스4</div>
+    <script>
+        const 박스 = document.querySelectorAll(".box")
+        const 박스들 = document.querySelectorAll(".box")
+
+        console.log(박스)
+        console.log(박스들)
+
+        박스들.forEach( (박스) => {console.log(박스)})
+        박스들.forEach( (박스) => {
+            박스.style.color = "#FFF"
+            박스.style.backgroundColor = "blue"
+        })
+    </script>
+</body>
+</html>

@@ -308,3 +308,20 @@
       - 이렇게 하면 비동기 작업을 동기 코드처럼 작성할 수 있음
       - async 함수 내부에서만 사용할 수 있음
       
+# DOM
+
+- **querySelectorAll()**
+  - 문서 내의 모든 요소에서 검색을 수행 / 지정된 선택자를 만족하는 요소를 찾으면 NodeList에 추가
+    -[예시] :
+        const elements = document.querySelectorAll('.my-class');
+        elements.forEach((element) => {
+          console.log(element);
+        });
+  - 메소드를 사용하여 class가 "my-class"인 요소를 찾은 다음 NodeList에 추가 / NodeList의 모든 요소에 대해 `forEach()` 메소드를 사용하여 `console.log()`를 호출
+  - NodeList 를 반환하므로 NodeList에서 제공하는 다양한 메소드를 사용할 수 있음
+  
+<aside>
+NodeList`는 `document.querySelectorAll()` 메소드로 선택한 요소들을 담는 유사 배열 객체입니다. `NodeList` 객체는 `forEach()` 등의 배열 메소드를 사용할 수 있습니다.
+하지만, `NodeList` 객체는 배열이 아니므로, 배열 메소드 외에는 사용할 수 없는 메소드도 있습니다. 이러한 경우, `Array.from()` 메소드를 사용하여 `NodeList` 객체를 배열로 변환할 수 있습니다.
+
+</aside>

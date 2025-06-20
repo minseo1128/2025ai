@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout 실습</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .input {
+            width: 115px;
+            height: 30px;
+            border: 1px solid rgb(127, 214, 153);
+            border-radius: 10px;
+            padding: 3px;
+        }
+
+        #start {
+            padding:8px;
+            border-radius: 10px;
+            height: 39px;
+            border: 1px solid rgb(71, 216, 191);
+            background-color: rgb(71, 216, 168);
+            color: white;
+        }
+
+        #stop {
+            padding:8px;
+            margin-left: 6px;
+            border-radius: 10px;
+            height: 39px;
+            border: 1px solid rgb(255, 80, 135);
+            background-color: rgb(255, 80, 135);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="set">시간 설정 <input type="number" class="input" placeholder=" 초 입력">초
+        <button id="start">시작</button><button id="stop">정지</button></div>
+
+    <br>
+
+    <h1>남은 시간</h1>
+
+    <br>
+        
+    <h1><span id="total"></span></h1>
+
+    <script>
+        const 초 = document.querySelector(".sec")
+        const 입력 = document.querySelector("timeinput")
+        const 시작버튼 = document.querySelector(".start")
+        const 정지버튼 = document.querySelector(".stop")
+
+        let 카운트함수
+        let 시작여부 = 0
+    </script>
+
+</html>

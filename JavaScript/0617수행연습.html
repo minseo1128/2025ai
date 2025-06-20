@@ -7,11 +7,11 @@
     <title>06 심민서</title>
     <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
     <script>
-        $(function () {
+        $(function() {        
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (pos) {
-                    $('#latitude').html(pos.coords.latitude);
-                    $('#longitude').html(pos.coords.longitude);
+                navigator.geolocation.getCurrentPosition (function(pos) {
+                    $('#latitude').html(pos.coords.latitude);    
+                    $('#longitude').html(pos.coords.longitude); 
                 });
             } else {
                 alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
@@ -32,7 +32,6 @@
         }
 
         body {
-            margin: 0 auto;
             width: 100%;
             height: 1000px;
             background-image: url('https://images.unsplash.com/photo-1490814525860-594e82bfd34a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUVCJThCJUFDJTIwJUVCJUIwJUIwJUVBJUIyJUJEJUVEJTk5JTk0JUVCJUE5JUI0fGVufDB8fDB8fHww');
@@ -40,13 +39,10 @@
             position: relative;
             color: rgb(255, 255, 255);
             font-family: 'GowunDodum-Regular';
-            justify-content: center;
-            align-items: center;
-        }
-
-        #info {
-            margin-top: -200px;
-            margin-bottom: 10px;
+            justify-content:space-between;
+            text-align: center;
+            font-size: 20px;
+            margin: 0 auto;
         }
 
         #weather-select {
@@ -60,22 +56,38 @@
             color: white;
         }
 
-        .main {
+        #info {
             display: flex;
             flex-direction: column;
-            margin-top: 200px;
-            height: 600px;
-            width: 300px;
+            margin-top: 260px;
+            height: 500px;
+            width: 80%;
             background-color: rgba(75, 72, 72, 0.534);
-            text-align: center;
-            padding: 14px;
-            padding-top: 270px;
+            padding: 20px;
             margin: 0 auto;
-            margin-top: 150px;
+            margin-top: 120px;
+            position: relative;
+            justify-content:space-between;
         }
 
-        ul {
-            list-style: none;
+
+        #wind img {
+            width:100px;
+        }
+
+        #humi img {
+            width: 100px;
+        }
+
+        .box1 {
+            width:80%;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        #info a {
+            margin-left: 30px;
+            
         }
     </style>
 
@@ -84,37 +96,30 @@
 <body>
     <header>
 
-        <section class="main">
-
-
-
             <div id="info">
-                <p id="location" style="background-color:rgba(0, 0, 0, 0.342);">지역 </p><br>
-                <p id="temperature" style="background-color:rgba(0, 0, 0, 0.342);">온도 <span></span>˚C</p><br>
+                <h2><p id="location">지역 </p></h2><br>
+                <p id="temperature">온도 <span></span>˚C</p><br>
+                <div id="image">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7059/7059294.png" alt="날씨기호">
+                </div>
+            
+                <br><br><br>
+
+                <div class = "box1">
+                
+
+                <a id="feel"><img src="https://cdn-icons-png.flaticon.com/128/11255/11255703.png" alt="wind">
+                    체감온도 <span></span> ˚C</a>
+
+                <a id="wind"><img src="https://cdn-icons-png.flaticon.com/512/1585/1585400.png" alt="wind" />
+                    풍속 <span></span> m/s</a>
+
+                <a id="humi"><img src="https://cdn-icons-png.flaticon.com/128/13137/13137065.png" alt="humidity" />
+                    습도 <span></span> %</a>
+
+                </div>
             </div>
-            <div id="image">
-                <img src="https://cdn-icons-png.flaticon.com/128/7059/7059294.png" alt="날씨기호">
-            </div>
-            <br>
-            <div id="detail">
-                <span id="feel">체감온도 <span></span> ˚C</span><br><br>
-                <span id="wind">풍속 <span></span> m/s</span><br><br>
-                <span id="humi">습도 <span></span> %</span>
-            </div>
-
-            <br>
-
-            <p style="background-color:rgba(0, 0, 0, 0.342);">
-                < 현재 내 위치>
-            </p><br>
-            <ul>
-                <li>위도 : <span id="latitude"></span></li>
-                <li>경도 : <span id="longitude"></span></li>
-            </ul>
-
-            <br>
-            <div class="t" style="background-color:rgba(0, 0, 0, 0.342);">현재 시각 </div><br><span class="time"></span>
-
+            
             <select id="weather-select">
                 <option value="seoul">Seoul</option>
                 <option value="new york">NewYork</option>
@@ -122,8 +127,16 @@
                 <option value="france">France</option>
                 <option value="vietnam">Vietnam</option>
             </select>
-        </section>
+            <br><br>
+            <p>< 현재 내 위치 ></p>
+            <ul>
+                <li>위도 : <span id="latitude"></span></li>
+                <li>경도 : <span id="longitude"></span></li>
+            </ul>
+            
 
+            <div class="t">현재 시각 <span class="time"></span></div>
+            
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script>
@@ -160,51 +173,52 @@
 
 
             function whereami(elt) {
-                var options = {
-                    enableHighAccuracy: false,
-                    maximumAge: 30000,
-                    timeout: 15000
-                }
-
-                if (navigator.geolocation)
-                    navigator.geolocation.getCurrentPosition(success, error, options);
-                else
-                    elt.innerHTML = "이 브라우저에서는 Geolocation이 지원되지 않습니다.";
-
-                function error(e) {
-                    elt.innerHTML = "Geolocation 오류 " + e.code + ": " + e.message;
-                }
-
-                function success(pos) {
-
-                    console.log(pos);
-
-                    var msg = "당신은 " +
-                        new Date(pos.timestamp).toLocaleString() + "에 " +
-                        " 위도 " + pos.coords.latitude +
-                        " 경도 " + pos.coords.longitude + "에서 " +
-                        " 약 " + pos.coords.accuracy + " 미터 떨어진 곳에 있습니다.";
-
-                    if (pos.coords.altitude) {
-                        msg += " 당신은 해발 " + pos.coords.altitude + " ± " +
-                            pos.coords.altitudeAccuracy + " 미터에 있습니다.";
-                    }
-
-                    if (pos.coords.speed) {
-                        msg += " 당신은 " + pos.coords.heading + " 방향으로 " +
-                            "초속 " + pos.coords.speed + "(m/s)의 속도로 움직이고 있습니다.";
-                    }
-
-                    elt.innerHTML = msg;
-                }
+            var options = {
+                enableHighAccuracy: false, 
+                maximumAge: 30000,     
+                timeout: 15000 
+            }
+ 
+            if(navigator.geolocation) 
+                navigator.geolocation.getCurrentPosition(success, error, options);
+            else
+                elt.innerHTML = "이 브라우저에서는 Geolocation이 지원되지 않습니다.";
+            
+            function error(e) {
+                elt.innerHTML = "Geolocation 오류 "+e.code +": " + e.message;
             }
 
-            setInterval(now, 1000);
-            function now() {
-                var time = new Date();
-                var obj = document.querySelector('.time');
-                obj.innerHTML = time.toLocaleTimeString();
+            function success(pos) {
+        
+            console.log(pos); 
+        
+            var msg = "당신은 " +
+            new Date(pos.timestamp).toLocaleString() + "에 " +
+            " 위도 " + pos.coords.latitude + 
+            " 경도 " + pos.coords.longitude + "에서 "+ 
+            " 약 " + pos.coords.accuracy + " 미터 떨어진 곳에 있습니다.";
+    
+            if(pos.coords.altitude) {
+                msg += " 당신은 해발 " + pos.coords.altitude + " ± " + 
+                    pos.coords.altitudeAccuracy + " 미터에 있습니다.";
             }
+        
+        if(pos.coords.speed) {
+            msg += " 당신은 " + pos.coords.heading + " 방향으로 " +
+                "초속 " + pos.coords.speed + "(m/s)의 속도로 움직이고 있습니다.";
+        }
+        
+        elt.innerHTML = msg;   
+        }    
+        }
+
+
+        setInterval(now, 1000);
+        function now() {
+        var time = new Date();
+        var obj = document.querySelector('.time');
+        obj.innerHTML = time.toLocaleTimeString();
+        }
 
         </script>
     </header>
