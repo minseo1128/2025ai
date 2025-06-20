@@ -40,25 +40,54 @@
     </style>
 </head>
 <body>
-    <div class="set">시간 설정 <input type="number" class="input" placeholder=" 초 입력">초
-        <button id="start">시작</button><button id="stop">정지</button></div>
+    <div class="set">
+        시간 설정 <input type="number" class="input" placeholder=" 초 입력">초
+        <button id="start">시작</button><button id="stop">정지</button>
+    </div>
 
-    <br>
+    <br />
 
     <h1>남은 시간</h1>
 
-    <br>
-        
-    <h1><span id="total"></span></h1>
+    <br />
+
+    <h1><span id="total">0</span></h1>
 
     <script>
-        const 초 = document.querySelector(".sec")
-        const 입력 = document.querySelector("timeinput")
-        const 시작버튼 = document.querySelector(".start")
-        const 정지버튼 = document.querySelector(".stop")
+        const 초 = document.querySelector("#total")
+        const 입력 = document.querySelector(".input")
+        const 시작버튼 = document.querySelector("#start")
+        const 정지버튼 = document.querySelector("#stop")
 
         let 카운트함수
         let 시작여부 = 0
-    </script>
 
+        시작버튼.addEventListener("click", function () {
+            if (입력.value != 0 && 입력.value !== "") {
+                if (시작여부 === 0) {
+                    시작여부 = 1
+                    초.textContent = 입력.value
+
+                    카운트함수 = setInterval(count, 1000)
+                }
+            }
+        })
+
+        정지버튼.addEventListener("click", function () {
+            clearInterval(카운트함수)
+            시작여부 = 0
+        })
+
+        function count() {
+            let 현재시간 = Number(초.textContent)
+            if (현재시간 > 0) {
+                초.textContent = 현재시간 - 1
+                console.log(초.textContent)
+            } else {
+                clearInterval(카운트함수)
+                시작여부 = 0
+            }
+        }
+    </script>
+</body>
 </html>
