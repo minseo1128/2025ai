@@ -320,8 +320,18 @@
   - 메소드를 사용하여 class가 "my-class"인 요소를 찾은 다음 NodeList에 추가 / NodeList의 모든 요소에 대해 `forEach()` 메소드를 사용하여 `console.log()`를 호출
   - NodeList 를 반환하므로 NodeList에서 제공하는 다양한 메소드를 사용할 수 있음
   
-<aside>
+- aside
 NodeList`는 `document.querySelectorAll()` 메소드로 선택한 요소들을 담는 유사 배열 객체입니다. `NodeList` 객체는 `forEach()` 등의 배열 메소드를 사용할 수 있습니다.
 하지만, `NodeList` 객체는 배열이 아니므로, 배열 메소드 외에는 사용할 수 없는 메소드도 있습니다. 이러한 경우, `Array.from()` 메소드를 사용하여 `NodeList` 객체를 배열로 변환할 수 있습니다.
 
 </aside>
+
+
+# 
+- console.log("getTime() :", 지금.getTime() / 1000 / 3600 / 24 / 365 )
+  - 1970.01.01 ~ 지금 까지 경과된 시간
+  - 초보다 작은 ms 단위라 / 1000 / 3600 / 24 / 365 <- 읽기 편하게 넣어줌
+- ### **Date()**
+
+- `Date()` 객체는 현재 날짜와 시간을 나타내는 객체를 생성합니다.
+- `new Date()`를 호출하면 현재 시간과 날짜를 포함하는 객체가 반환됩니다.

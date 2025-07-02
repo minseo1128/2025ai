@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습1 - 날짜 Dday 타이머</title>
+    <style>
+        @font-face {
+            font-family: 'Ownglyph_ParkDaHyun';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'Ownglyph_ParkDaHyun';
+            color: rgb(79, 166, 120);
+            text-shadow: 1px 1px 0px rgb(186, 206, 186);
+            font-size: 40px;
+            margin-top: 50px;
+        }
+
+        body {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+
+        .box {
+            width: 500px;
+            height: 100px;
+            border: 1px solid rgb(132, 132, 132);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>D - Day Timer</h1>
+
+    <hr>
+
+    <p>입력되는 날짜는 오늘 이후여야 함</p>
+    <p>프로그램 상으로 입력할 날짜 입력 양식은 ISO를 따름:</p>
+    <p>날짜가 2024-01-01 이더라도 입력할 때는 2024-01-01T00:00:00 양식</p>
+    <p>tip : 일 → 시간 → 분 → 초 순으로 구하기</p>
+
+    <label>
+        <input type="date">
+        <button>시작</button>
+    </label>
+
+    <div class="box" id="countdown"></div>
+
+    <script>
+        const 입력 = document.querySelector("input");
+        const button = document.querySelector("button");
+        const countdownDiv = document.getElementById("countdown");
+
+        let timerId = null;
+
+        button.addEventListener("click", function () {
+            if (timerId) clearInterval(timerId);
+
+            const targetDateStr = 입력.value + "T00:00:00";
+            const targetDate = new Date(targetDateStr);
+            const now = new Date();
+
+            if (!입력.value) {
+                countdownDiv.textContent = "날짜를 입력해주세요.";
+                return;
+            }
+
+            if (now.getTime() > targetDate.getTime()) {
+                countdownDiv.textContent = "오늘 이후 날짜를 입력하세요.";
+                return;
+            }
+
+            countdownDiv.textContent = "카운트다운 시작!";
+
+            updateCountdown(targetDate); 
+
+            timerId = setInterval(() => {
+                updateCountdown(targetDate);
+            }, 1000);
+        });
+
+        function updateCountdown(eventDate) {
+            const now = new Date().getTime();
+            const eventTime = eventDate.getTime();
+
+            const timeRemaining = eventTime - now;
+
+            if (timeRemaining <= 0) {
+                countdownDiv.textContent = "D-Day입니다!";
+                clearInterval(timerId);
+                return;
+            }
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
+            const seconds = Math.floor((timeRemaining / 1000) % 60);
+
+            countdownDiv.textContent = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+        }
+    </script>
+
+</body>
+
+</html>
+  

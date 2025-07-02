@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13. 자주쓰는 함수2(날짜, 시간)</title>
+</head>
+
+<body>
+    <script>
+        let 지금 = new Date()
+        console.log(지금)
+
+        console.log("getFullYear :", 지금.getFullYear())
+        console.log("getMonth :", 지금.getMonth())
+        console.log("getDay :", 지금.getDay())  // 오해 주의
+        console.log("getDate :", 지금.getDate())  // 오늘 며칠
+
+        지금.setFullYear(2025)
+        지금.setMonth(4)
+        지금.setDate(9)
+        console.log(지금)
+
+        console.log(지금.toLocaleDateString())  // 읽기 쉽게 바꿔주기
+
+        // 시간
+        console.log("getHours 시간 :", 지금.getHours())
+        console.log("getMinutes :", 지금.getMinutes())
+        console.log("getSeconds 초 :", 지금.getSeconds())
+
+        console.log("getTime() :", 지금.getTime() / 1000 / 3600 / 24 / 365)  // 1970.1.1 부터 지금까지 경과된 시간 
+        console.log("get.now() :", Date.now())
+        console.log(지금.toLocaleString())  // 읽기 쉽게 바꿔주는 것
+
+        console.log(지금.toISOString())  // ISO 형식으로 변환
+
+        let 현재 = new Date()
+
+        let 과거 = new Date()
+        과거.setFullYear(2007)
+        과거.setMonth(10)
+        과거.setDate(28)
+
+        let 시간차이 = 현재.getTime() - 과거.getTime()
+        console.log(시간차이)
+        console.log(시간차이 / 1000 / 3600 / 24 / 365)
+
+    </script>
+</body>
+
+</html>
