@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOT API 프로젝트</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 헤더 검색 부분 */
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search {
+            width: 350px;
+            height: 50px;
+            border-radius: 25px;
+            border: 3px solid rgb(0, 217, 255);
+            margin-right: 20px;
+        }
+
+        .button {
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: rgb(0, 217, 255);
+            color: white;
+            font-size: 15pt;
+            font-weight: 600;
+            border: none;
+        }
+
+        /*프로필 전적 요약 부분*/
+        .profile {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            display: flex;
+            border-bottom: 5px solid white;
+        }
+
+        .name-left {
+            position: relative;
+        }
+
+        .name-left .profile-img {
+            width: 150px;
+        }
+
+        .name-left .profile-level {
+            position: absolute;
+            bottom: -5px;
+            left: 65px;
+            background-color: rgb(0, 217, 255);
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .name-right .tier {
+            width: 100px;
+        }
+
+
+        /*20개 게임 승률, kda 분석*/
+        .information {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .information .left .death {
+            color: red;
+        }
+
+        .information .left .kda {
+            font-size: 20pt;
+            font-weight: 900;
+        }
+
+        .information .center img {
+            width: 60px;
+        }
+
+        .games .win {
+            padding: 10px;
+            background-color: rgb(161, 255, 246);
+            border-left: 5px solid rgb(0, 217, 255);
+        }
+
+        .game {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .game .left {
+            text-align: center;
+        }
+
+        .game .center .champion {
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        .game .center .rune1 {
+            width: 50px;
+        }
+
+        .game .center .rune2 {
+            width: 50px;
+        }
+
+        .game .center .spell1 {
+            width: 50px;
+        }
+
+        .game .center .spell2 {
+            width: 50px;
+        }
+
+
+        .game .center .champion {
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        .game .center2 {
+            text-align: center;
+        }
+
+        .game .center2 .kda {
+            font-size: 15pt;
+            font-weight: 900;
+        }
+
+        .game .center2 .kda .death {
+            color: red;
+        }
+
+        .game .center2 .rate {
+            color: grey;
+        }
+
+        .game .center2 .cs {
+            color: grey;
+        }
+
+        .game .center .level {
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .game .center .multkill {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .game .center .item1 {
+            width: 50px;
+        }
+
+        .game .center .item2 {
+            width: 50px;
+        }
+
+        .game .center .item3 {
+            width: 50px;
+        }
+
+        .game .center .item4 {
+            width: 50px;
+        }
+
+        .game .center .item5 {
+            width: 50px;
+        }
+
+        .game .center .item6 {
+            width: 50px;
+        }
+
+        .game .right {
+            display: flex;
+            font-size: 8pt;
+        }
+
+        .game .right img {
+            width: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!--검색바-->
+        <header>
+
+            <input type="text" class="search">
+            <button class="button">검색</button>
+        </header>
+
+        <!--전적 요약 부분-->
+        <div class="profile">
+            <div class="name">
+                <div class="name-left">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWMMb1Or5jaanv5MU4ajoi2taDKdfTpgDW2DztU98s0eTZ3OiSdjR3c32oKyDKfXZNqmI&usqp=CAU"
+                        alt="꽃모자민겸" class="profile-img">
+                    <span class="profile-level">300</span>
+                </div>
+                <div class="name-right">
+                    <h1>대전소녀 #s01</h1>
+                    <div>
+                        <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/36727017636627"
+                            alt="티어" class="tier">
+                        <br>
+                        승률<span class="rate">100%</span>
+                        <span class="win">100</span>승
+                        <span class="lose">0</span>패
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="information">
+            <div class="left">
+                승률 <span class="rate">100</span>% <span class="win">20</span>승 <span class="lose">0</span>패
+                <br>
+                <span class="kill">10</span> / <span class="death"> 4 </span> / <span class="assist">10</span>
+                <br>
+                <span class="kda">5 : 1</span>
+            </div>
+            <div class="center">
+                <h2>최근 챔피언</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWk2NLzYN5FgrkhsmJlwuLt6qmopXEXZPv5Q&s"
+                    alt="" class="cham1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWk2NLzYN5FgrkhsmJlwuLt6qmopXEXZPv5Q&s"
+                    alt="" class="cham2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWk2NLzYN5FgrkhsmJlwuLt6qmopXEXZPv5Q&s"
+                    alt="" class="cham3">
+            </div>
+            <div class="right">
+                탑<span>4</span>
+                정글<span>4</span>
+                미드<span>4</span>
+                바텀<span>4</span>
+                서폿<span>4</span>
+            </div>
+        </div>
+
+        <!--20개 게임들-->
+        <div class="games">
+            <div class="game win">
+                <div class="left">
+                    <p class="ll">솔로랭크</p>
+                    <p class="sp">승리</p>
+                </div>
+
+                <div class="center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWk2NLzYN5FgrkhsmJlwuLt6qmopXEXZPv5Q&s"
+                        alt="챔피언" class="champion">
+                    <span class="level">level 5</span>
+                    <img src="https://i.namu.wiki/i/O9Hrh9sKDdS6gC7txJUk8CjWH0Zo9fTRQ4ZBSImCpLPKIcqqWT20GWt6FbK-QhizRd8mN0CemrsYm_y87BQoIg.webp"
+                        class="rune1">
+                    <img src="https://i.namu.wiki/i/fdOP9_PkdhjrYTxq1n0vtsQ5n_pgqiAqBJ_VF1omC4sGfQ3el_XlOFos0qCkg1f5kJKJR-ktV0vVkOUPJQiUHg.webp"
+                        class="rune2">
+                    <img src="https://i.namu.wiki/i/zQyRlNZLeJCLuGzeW0dbIXyoKjmGdQF1LAGWiZbRwmfTLqSQRHX-5Q3PEnbkBalJf_D5yjU5pCdGUAYQOIpL9A.webp"
+                        class="spell1">
+                    <img src="https://i.namu.wiki/i/1suCb_I4fKMaXcwUyiqDi0dg8ee26_XdUUwVk-aefkUxKAeJd68n76peSIQc0o0gwMULKeVHFswcM0yPjYZn5g.webp"
+                        class="spell2">
+                    레벨
+                    <span class="multkill">펜타킬</span>
+
+                    <div class="items">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item1">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item2">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item3">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item4">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item5">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item6">
+                    </div>
+                </div>
+
+                <div class="center2">
+                    <p class="kda"><span class="kill">25</span> / <span class="death">4</span> / <span
+                            class="assist">3</span></p>
+                    <p class="rate">평점<span>7.0</span></p>
+                    <p class="cs"><span>200</span> CS</p>
+                </div>
+                <div class="right">
+                    <div class="team1">
+                        <p><img
+                                src="https://i.pinimg.com/originals/8f/09/74/8f0974e7303b6808af8d1dd20aaace0a.jpg"><span>닉네임1</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/9c/46/ac/9c46ac2b26a5ffa60225ae228bfca976.jpg"><span>닉네임2</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/16/3c/99/163c99e03a37fdedb13129ba0b5f0e53.jpg"><span>닉네임3</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/84/c8/69/84c8695b58581bb0acc8ac5eff87d952.jpg"><span>닉네임4</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/7c/a9/33/7ca9335bdab9ad99efff38b001f01d8f.jpg"><span>닉네임5</span>
+                        </p>
+                    </div>
+                    <div class="team2">
+                        <p><img
+                                src="https://i.pinimg.com/originals/8f/09/74/8f0974e7303b6808af8d1dd20aaace0a.jpg"><span>닉네임1</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/9c/46/ac/9c46ac2b26a5ffa60225ae228bfca976.jpg"><span>닉네임2</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/16/3c/99/163c99e03a37fdedb13129ba0b5f0e53.jpg"><span>닉네임3</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/84/c8/69/84c8695b58581bb0acc8ac5eff87d952.jpg"><span>닉네임4</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/7c/a9/33/7ca9335bdab9ad99efff38b001f01d8f.jpg"><span>닉네임5</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="games">
+            <div class="game win">
+                <div class="left">
+                    <p class="ll">솔로랭크</p>
+                    <p class="sp">승리</p>
+                </div>
+
+                <div class="center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWk2NLzYN5FgrkhsmJlwuLt6qmopXEXZPv5Q&s"
+                        alt="챔피언" class="champion">
+                    <span class="level">level 5</span>
+                    <img src="https://i.namu.wiki/i/O9Hrh9sKDdS6gC7txJUk8CjWH0Zo9fTRQ4ZBSImCpLPKIcqqWT20GWt6FbK-QhizRd8mN0CemrsYm_y87BQoIg.webp"
+                        class="rune1">
+                    <img src="https://i.namu.wiki/i/fdOP9_PkdhjrYTxq1n0vtsQ5n_pgqiAqBJ_VF1omC4sGfQ3el_XlOFos0qCkg1f5kJKJR-ktV0vVkOUPJQiUHg.webp"
+                        class="rune2">
+                    <img src="https://i.namu.wiki/i/zQyRlNZLeJCLuGzeW0dbIXyoKjmGdQF1LAGWiZbRwmfTLqSQRHX-5Q3PEnbkBalJf_D5yjU5pCdGUAYQOIpL9A.webp"
+                        class="spell1">
+                    <img src="https://i.namu.wiki/i/1suCb_I4fKMaXcwUyiqDi0dg8ee26_XdUUwVk-aefkUxKAeJd68n76peSIQc0o0gwMULKeVHFswcM0yPjYZn5g.webp"
+                        class="spell2">
+                    레벨
+                    <span class="multkill">펜타킬</span>
+
+                    <div class="items">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item1">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item2">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item3">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item4">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item5">
+                        <img src="https://i.namu.wiki/i/kSGn_7SUHIVwfohR-AQLTBZgxuDdpQ6XcjbjrDnXR7FhrLqKSzmUR85fMOSPHwyAJ4Sce9m82Z3LgXPBjLXjTw.webp"
+                            class="item6">
+                    </div>
+                </div>
+
+                <div class="center2">
+                    <p class="kda"><span class="kill">25</span> / <span class="death">4</span> / <span
+                            class="assist">3</span></p>
+                    <p class="rate">평점<span>7.0</span></p>
+                    <p class="cs"><span>200</span> CS</p>
+                </div>
+                <div class="right">
+                    <div class="team1">
+                        <p><img
+                                src="https://i.pinimg.com/originals/8f/09/74/8f0974e7303b6808af8d1dd20aaace0a.jpg"><span>닉네임1</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/9c/46/ac/9c46ac2b26a5ffa60225ae228bfca976.jpg"><span>닉네임2</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/16/3c/99/163c99e03a37fdedb13129ba0b5f0e53.jpg"><span>닉네임3</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/84/c8/69/84c8695b58581bb0acc8ac5eff87d952.jpg"><span>닉네임4</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/7c/a9/33/7ca9335bdab9ad99efff38b001f01d8f.jpg"><span>닉네임5</span>
+                        </p>
+                    </div>
+                    <div class="team2">
+                        <p><img
+                                src="https://i.pinimg.com/originals/8f/09/74/8f0974e7303b6808af8d1dd20aaace0a.jpg"><span>닉네임1</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/9c/46/ac/9c46ac2b26a5ffa60225ae228bfca976.jpg"><span>닉네임2</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/16/3c/99/163c99e03a37fdedb13129ba0b5f0e53.jpg"><span>닉네임3</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/736x/84/c8/69/84c8695b58581bb0acc8ac5eff87d952.jpg"><span>닉네임4</span>
+                        </p>
+                        <p><img
+                                src="https://i.pinimg.com/1200x/7c/a9/33/7ca9335bdab9ad99efff38b001f01d8f.jpg"><span>닉네임5</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
