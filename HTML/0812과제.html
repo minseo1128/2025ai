@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0812 과제</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .main-box {
+            width:80%;
+            margin: 0 auto;
+
+        }
+        .box {
+            border: 1px solid rgb(194, 194, 194);
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-box">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">부트스트랩 실습용 페이지1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                이소희
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">252</a></li>
+                                <li><a class="dropdown-item" href="#">또리</a></li>
+                                <li><a class="dropdown-item" href="#">끼끼</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">어둠의 제왕 다크니스</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">메인페이지</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i.ytimg.com/vi/VvndocyxOtY/maxresdefault.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/Hf0qIeqddj8/maxresdefault.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/L9nlivUqiNc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA0jcY4L-xoGvE3XnONCb02wr2Ing" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="box col-lg-3 col-md-6 col-sm-12"><img src="https://i.namu.wiki/i/77vC5QDz847DdiCLVM8Yqy-Tt0vg-9_Yq-jeyC3B201HV5hJ6z6weVai3bJzEquAyQBV7x64wgQM3hyhBz9ExQ.webp" class="card-img-top" alt="...">꿈과 직업은 다르다</div>
+            <div class="box col-lg-3 col-md-6 col-sm-12"><img src="https://biz.chosun.com/resizer/v2/H7JI646LLLSHWUXNBOQIVIURFY.jpg?auth=28cfd60f51594c6d96901b9c873dbb829f8a2255eb02ed6e91d7a289e60a5270&width=616" class="card-img-top" alt="...">인생에서 지금만 할 수 있는 일을 우선순위에 둬라</div>
+            <div class="box col-lg-3 col-md-6 col-sm-12"><img src="https://i.namu.wiki/i/MbBFtN0sYVbxSle4lYtQwAcah7cEMBPbP-XrjFHWTO-njU7yklmFOLvBO2bOi3bWK5tLD-2wnP86RW5sUM0n4A.webp" class="card-img-top" alt="...">포기하려면 미련이 안 남을 정도로 최선을 다하고 나서야 포기해라</div>
+            <div class="box col-lg-3 col-md-6 col-sm-12"><img src="https://i.namu.wiki/i/cJJq1s0pPLirvmlkxpUhcnlE6T_8CRezq-1SVtw6ofhEj6fcm0n62PWZccqPG6bIsmd-desSLIVovCYCRO5Oqw.webp" class="card-img-top" alt="...">자신을 소중히 여겨 준 자를 절대 잊지 마라</div>
+        </div>
+
+        
+    </div>
+</body>
+
+</html>
