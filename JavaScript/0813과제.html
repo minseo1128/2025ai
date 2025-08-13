@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 만들기</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        input {
+            width: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Shopping Cart</h1>
+    <p>forEach 함수를 사용할 것</p>
+    <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+    <p>dataset을 사용하여 가격과 할인율을 계산할 것</p>
+    <div class="main">
+        <div class="box">
+            <h1>충만치킨 1마리</h1>
+            <img
+                src="https://file3.instiz.net/data/cached_img/upload_thumb/2024/01/23/13/efe0b4a9d32027538b9c6c7c408e92ad.jpg">
+            <p class="price" data-price="18900" data-sale="0.1">Price: 21000 → 18900</p>
+            <p>할인: 10%</p>
+            <p>수량 : <input type="number" min="0" max="100" step="1" value="0"></p>
+        </div>
+        <div class="box">
+            <h1>쌀통닭 1마리</h1>
+            <img
+                src="https://www.wishbucket.io/_next/image?url=https%3A%2F%2Fd2gfz7wkiigkmv.cloudfront.net%2Fpickin%2F2%2F18%2F19%2FLYCYKTtmTkGNQD2x_TSk8w&w=640&q=75">
+            <p class="price" data-price="13600" data-sale="0.2">Price: 17000 → 13600</p>
+            <p>할인: 10%</p>
+            <p>수량 : <input type="number" min="0" max="100" step="1" value="0"></p>
+        </div>
+        <div class="box">
+            <h1>옥야식당 국밥</h1>
+            <img src="https://pbs.twimg.com/media/F2_Z83bWMAEqSnf?format=jpg&name=large">
+            <p class="price" data-price="8000" data-sale="0.2">Price: 10000 → 8000</p>
+            <p>할인: 10%</p>
+            <p>수량 : <input type="number" min="0" max="100" step="1" value="0"></p>
+        </div>
+        <div class="box">
+            <h1>청하감자탕</h1>
+            <img
+                src="https://file3.instiz.net/data/cached_img/upload/2024/02/10/2/bd28b5a87347ebda3a1cdd2155cb439d.jpg">
+            <p class="price" data-price="4000" data-sale="0.5">Price: 8000 → 4000</p>
+            <p>할인: 10%</p>
+            <p>수량 : <input type="number" min="0" max="100" step="1" value="0"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Total: <span id="total"></span></h2>
+
+    <script>
+        calculateTotal();
+
+        function calculateTotal() {
+            const items = document.querySelectorAll('.box');
+            let total = 0;
+
+            items.forEach(box => {
+                const priceEl = box.querySelector('.price');
+                const price = parseInt(priceEl.dataset.price);
+                const sale = parseFloat(priceEl.dataset.sale);
+                const quantity = parseInt(box.querySelector('input').value) || 0;
+
+                total += price * quantity;
+            });
+
+            document.querySelector('#total').textContent = total.toLocaleString() + '원';
+        }
+
+        document.querySelectorAll('.box input').forEach(input => {
+            input.addEventListener('input', calculateTotal);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
