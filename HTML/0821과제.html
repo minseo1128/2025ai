@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18회차 실습</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
+
+    <style>
+        body {
+            background-color: rgb(187, 255, 255);
+        }
+
+        .box {
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 2px 2px 5px #969696;
+            width: 75%;
+            margin: 0 auto;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 40px;
+        }
+
+        .btn-secondary {
+            width: 130px;
+            background-color: white;
+            border-color: white;
+            color: black;
+            border-radius: 1px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>회원가입 하세요</h1>
+
+        <br>
+
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">이용 약관 안내</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">이용 약관</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                Call me by name
+                Where my heart sways
+                나의 시간이 온 듯해
+                저 햇빛 속에
+                거친 바람을 타
+                우린 시인이야 노래야
+                긴 잠에서 막 깨어나
+                아픔이 뭔지도 몰라
+                Call me by fate
+                Where my heart sways
+                꿈들이 속삭인 곳에
+                넌 날 무너뜨리고 다시 일으켜
+                결국 날 숨 쉬게 한
+                운명이란 걸 믿게 한 사람 오직 너뿐
+                I guess we
+                It's time to stir it up
+                And then we settle down
+                말해줘 Perfect love
+                그게 뭔데
+                타오르고 있어
+                느껴봐 We are young no doubt
+                I'm such a loser, she such a weirdo
+                누가 뭐래 널 원하고 있어
+                And I'm loving the combo combo
+                완벽한 폭풍
+                그 눈 속 헤쳐
+                위험을 찾아 늘 그랬어
+                진실을 원해
+                살 에이는 듯한
+                And it hurts and it hurts and I
+                너만 있으면 되잖아
+                달아나려고 하지 마
+                모두 망가져 버린 듯해도
+                둘만은 살아 반짝일걸
+                넌 날 무너뜨리고 다시 일으켜
+                결국 날 숨 쉬게 한
+                사랑 같은 걸 믿게 한 바보 오직 너뿐
+                I guess we
+                It's time to stir it up
+                And then we settle down
+                말해줘 Perfect love
+                그게 뭔데
+                타오르고 있어
+                느껴봐 We are young no doubt
+                I'm such a loser, she such a weirdo
+                누가 뭐래 널 원하고 있어
+                And I'm loving the combo combo
+                둘만의 법칙
+                같은 길인 듯해도 삐뚤어지곤 해
+                넌 걱정하지 마
+                You honest I promise I won't let it fade away
+                밤과 낮 속에서 미지를 껴안아
+                I'm in with you deep to up top
+                긴 여정의 첫걸음 그 시작이 어디였든
+                Cause when I'm with you I feel like I'm free
+                I guess we
+                It's time to stir it up
+                And then we settle down
+                말해줘 Perfect love
+                그게 뭔데
+                타오르고 있어
+                느껴봐 We are young no doubt
+                I'm such a loser, she such a weirdo
+                누가 뭐래 널 원하고 있어
+                And I'm loving the combo combo
+                I'm such a loser, she such a weirdo
+                누가 뭐래 널 원하고 있어
+                And I'm loving the combo combo
+            </div>
+        </div>
+
+        <br><br>
+
+        <form>
+
+
+            <div class="row mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+                    ID
+                </button>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+                    비밀번호
+                </button>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+                    비밀번호 확인
+                </button>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip" data-bs-title="당신의 이름">
+                    이름
+                </button>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip" data-bs-title="휴대전화 번호 입력하세요">
+                    연락처
+                </button>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="inputPassword3">
+                </div>
+            </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">성별</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
+                            checked="">
+                        <label class="form-check-label" for="gridRadios1">남</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">여</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">취미</legend>
+                <div class="col-sm-10 row">
+                    <div class="form-check col-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">게임</label>
+                    </div>
+                    <div class="form-check col-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck2">
+                        <label class="form-check-label" for="gridCheck2">운동</label>
+                    </div>
+                    <div class="form-check col-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck3">
+                        <label class="form-check-label" for="gridCheck3">독서</label>
+                    </div>
+                    <div class="form-check col-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck4">
+                        <label class="form-check-label" for="gridCheck4">음악</label>
+                    </div>
+                    <div class="form-check col-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck5">
+                        <label class="form-check-label" for="gridCheck5">여행</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck"> 로봇이 아닙니다 </label>
+                </div>
+            </div>
+
+            <br>
+
+            <button type="button" class="btn btn-primary" id="liveToastBtn">회원가입</button>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">가입 완료 안내</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        제출이 완료되었습니다.
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+            const toastTrigger = document.getElementById('liveToastBtn')
+            const toastLiveExample = document.getElementById('liveToast')
+
+            if (toastTrigger) {
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                toastTrigger.addEventListener('click', () => {
+                    toastBootstrap.show()
+                })
+            }
+        </script>
+</body>
+
+</html>

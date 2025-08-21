@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .header {
+            width: 88%;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Meet MEAT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">메뉴</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">다이닝 예약</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">부대시설</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">마이페이지</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mt-3" style="position: relative;">
+            <div class="col-lg-9 col-md-8 scrollspy-example" id="left" data-bs-spy="scroll"
+                data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+                <div class="card mb-4" id="list-item-1">
+                    <img src="https://i.ytimg.com/vi/fr1JI03e2l8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBMPgiw3eojqEkOMLVMpmuaENGvyw"
+                        class="card-img-top" alt="프라임립">
+                    <div class="card-body">
+                        <h5 class="card-title">프라임 립</h5>
+                        <p class="card-text">소고기 갈비등심 부위인 프라임 립 Prime Rib</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#menuModal">상세
+                            보기</button>
+                        <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel"
+                            aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="menuModalLabel">프라임립</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>평점 : ★★★★☆ </p>
+                                        <p>가격 : 49,000원</p>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-auto">
+                                                <label for="inputPassword6" class="col-form-label">주문수량</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="number" id="inputPassword6" class="form-control"
+                                                    aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-primary" id="liveToastBtn">가격
+                                                    계산</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast fade hide" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <img src="..." class="rounded me-2" alt="...">
+                                                            <strong class="me-auto">Bootstrap</strong>
+                                                            <small>11 mins ago</small>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body"> Hello, world! This is a toast message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group mt-3">
+                                            <button type="button" class="btn btn-success dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                배달여부
+                                            </button>
+                                            <ul class="dropdown-menu" style="">
+                                                <li><a class="dropdown-item" href="#">방문포장</a></li>
+                                                <li><a class="dropdown-item" href="#">매장식사</a></li>
+                                                <li><a class="dropdown-item" href="#">배달</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4" id="list-item-2">
+                    <img src="https://i.ytimg.com/vi/wMkwsPPt8nE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBGmBe-pUOKK6baCPl5opKM8wZePw"
+                        class="card-img-top" alt="프라임립">
+                    <div class="card-body mb-4">
+                        <h5 class="card-title"><span class="badge rounded-pill text-bg-primary">New</span> 양갈비</h5>
+                        <p class="card-text">워낙 부드럽고 식감이 좋지만 비릿한 향이 있는 양고기.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#menuModal2">상세
+                            보기</button>
+                        <div class="modal fade" id="menuModal2" tabindex="-1" aria-labelledby="menuModalLabel2"
+                            style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="menuModalLabel">양갈비</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>평점 : ★★★★☆ </p>
+                                        <p>가격 : 32,000원</p>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-auto">
+                                                <label for="inputPassword6" class="col-form-label">주문수량</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="number" id="inputPassword6" class="form-control"
+                                                    aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-primary" id="liveToastBtn">가격
+                                                    계산</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <img src="..." class="rounded me-2" alt="...">
+                                                            <strong class="me-auto">Bootstrap</strong>
+                                                            <small>11 mins ago</small>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body"> Hello, world! This is a toast message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group mt-3">
+                                            <button type="button" class="btn btn-success dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                배달여부
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">방문포장</a></li>
+                                                <li><a class="dropdown-item" href="#">매장식사</a></li>
+                                                <li><a class="dropdown-item" href="#">배달</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4" id="list-item-3">
+                    <img src="https://i.ytimg.com/vi/cIl0ZYVLbPU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDlVf22ssx0yMNC9YmnW99IFNnt1Q"
+                        class="card-img-top" alt="프라임립">
+                    <div class="card-body mb-4">
+                        <h5 class="card-title"> <span class="badge rounded-pill text-bg-danger">Best</span> 아구찜</h5>
+                        <p class="card-text">아귀와 콩나물을 매콤한 고추장 기반으로 볶은 요리.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#menuModal3">상세
+                            보기</button>
+
+                        <div class="modal fade" id="menuModal3" tabindex="-1" aria-labelledby="menuModalLabel3"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="menuModalLabel">아구찜</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>평점 : ★★★★★ </p>
+                                        <p>가격 : 45,000원</p>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-auto">
+                                                <label for="inputPassword6" class="col-form-label">주문수량</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="number" id="inputPassword6" class="form-control"
+                                                    aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-primary" id="liveToastBtn">가격
+                                                    계산</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <img src="..." class="rounded me-2" alt="...">
+                                                            <strong class="me-auto">Bootstrap</strong>
+                                                            <small>11 mins ago</small>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body"> Hello, world! This is a toast message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group mt-3">
+                                            <button type="button" class="btn btn-success dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                배달여부
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">방문포장</a></li>
+                                                <li><a class="dropdown-item" href="#">매장식사</a></li>
+                                                <li><a class="dropdown-item" href="#">배달</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4" id="list-item-4">
+                    <img src="https://i.ytimg.com/vi/ApJSfMkUfNI/hqdefault.jpg" class="card-img-top" alt="프라임립">
+                    <div class="card-body mb-4">
+                        <h5 class="card-title"> <span class="badge rounded-pill text-bg-danger">Best</span> 간장게장</h5>
+                        <p class="card-text">여러 가지 재료를 넣은 간장을 끓이고 식힌 후 게를 푹 담가서 절이기를 반복해서 만드는 음식. 독보적인 밥도둑.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#menuModal4">상세
+                            보기</button>
+                        <div class="modal fade" id="menuModal4" tabindex="-1" aria-labelledby="menuModalLabel4"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="menuModalLabel">간장게장</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>평점 : ★★★★★ </p>
+                                        <p>가격 : 35,000원</p>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-auto">
+                                                <label for="inputPassword6" class="col-form-label">주문수량</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="number" id="inputPassword6" class="form-control"
+                                                    aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-primary" id="liveToastBtn">가격
+                                                    계산</button>
+                                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                                        aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <img src="..." class="rounded me-2" alt="...">
+                                                            <strong class="me-auto">Bootstrap</strong>
+                                                            <small>11 mins ago</small>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="toast" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="toast-body"> Hello, world! This is a toast message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group mt-3">
+                                            <button type="button" class="btn btn-success dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">배달여부</button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">방문포장</a></li>
+                                                <li><a class="dropdown-item" href="#">매장식사</a></li>
+                                                <li><a class="dropdown-item" href="#">배달</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4" id="right">
+                <h3>메뉴</h3>
+                <div id="list-example" class="list-group mb-4">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">프라임 립</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">양갈비</a>
+                    <a class="list-group-item list-group-item-action active" href="#list-item-3">아구찜</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">간장게장</a>
+                </div>
+                <div class="card">
+                    <img src="https://mblogthumb-phinf.pstatic.net/MjAyNDA0MTdfMTU4/MDAxNzEzMzA3NzA1OTAw.DfJMikExFFOMestAbVuiga0et0rXmhElgmkugteUJtYg.2z4WUh8gcpxSgybkVIlYRYcCqmNKk6KjWsSKTzWguw8g.JPEG/IMG_6393.JPG?type=w800"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">허전한 옆구리를 달래기 위한 카드.... <i class="fa-solid fa-user"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
