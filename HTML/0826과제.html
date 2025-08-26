@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+
+
+    <style>
+        .main-box {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .card img {
+            background: cover;
+        }
+
+        .card {
+            width: 30%;
+            display: inline-block;
+        }
+
+        .btn btn-secondary {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">티켓 판매 페이지</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">홈</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">특가 페이지</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    커뮤니티
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">공지사항</a></li>
+                                    <li><a class="dropdown-item" href="#">게시판</a></li>
+                                    <li><a class="dropdown-item" href="#">중고장터</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">더보기</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">판매 대기 중</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="card" aria-hidden="true">
+            <img src="https://image.blip.kr/v1/file/0d950f1cbaf48aa60a3de65bb8d71ed3" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12 bg-success" style="width: 60%;"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7">집 가고 싶다</span>
+                    <span class="placeholder col-4">졸려</span>
+                    <span class="placeholder col-4">집 보내줘</span>
+                    <span class="placeholder col-6">배고파</span>
+                    <span class="placeholder col-8"></span>
+                </p>
+                <button class="placeholder btn btn-primary col-6" aria-disabled="true" data-bs-toggle="popover"
+                    data-bs-title="안내" data-bs-content="18:00 오픈 예정">신청</button>
+            </div>
+        </div>
+
+
+        <div class="card" aria-hidden="true">
+            <img src="https://image.blip.kr/v1/file/0d950f1cbaf48aa60a3de65bb8d71ed3" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12 bg-success" style="width: 60%;"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7">집 가고 싶다</span>
+                    <span class="placeholder col-4">졸려</span>
+                    <span class="placeholder col-4">집 보내줘</span>
+                    <span class="placeholder col-6">배고파</span>
+                    <span class="placeholder col-8"></span>
+                </p>
+                <button class="placeholder btn btn-primary col-6" aria-disabled="true" data-bs-toggle="popover"
+                    data-bs-title="안내" data-bs-content="18:00 오픈 예정">신청</button>
+            </div>
+        </div>
+
+
+        <div class="card" aria-hidden="true">
+            <img src="https://image.blip.kr/v1/file/0d950f1cbaf48aa60a3de65bb8d71ed3" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12 bg-success" style="width: 60%;"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7">집 가고 싶다</span>
+                    <span class="placeholder col-4">졸려</span>
+                    <span class="placeholder col-4">집 보내줘</span>
+                    <span class="placeholder col-6">배고파</span>
+                    <span class="placeholder col-8"></span>
+                </p>
+                <button class="placeholder btn btn-primary col-6" aria-disabled="true" data-bs-toggle="popover"
+                    data-bs-title="안내" data-bs-content="18:00 오픈 예정">신청</button>
+            </div>
+        </div>
+
+        <script>
+
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+            const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+        </script>
+
+
+
+    </div>
+</body>
+
+</html>
