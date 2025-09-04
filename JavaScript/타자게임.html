@@ -75,8 +75,8 @@
         <input type="text" placeholder="입력하세요">
 
         <div class="board">
-            남은시간 : <span class="time">0</span>초
-            점수 : <span class="score">0</span>초
+            남은시간 : <span class="time">0</span>초 /
+            점수 : <span class="score">0</span>점
         </div>
 
         <button>게임시작</button>
@@ -116,18 +116,24 @@
         const 게임시작버튼 = document.querySelector("button")
         const 남은시간 = document.querySelector(".time")
 
+        const 점수 = document.querySelector(".score")
+        const 타이핑 = document.querySelector(".text")
+
+        let 설정시간 = 7
         let 게임시작여부 = false
 
+
+        // 게임시작 동작
         게임시작버튼.addEventListener("click", function () {
 
             console.log("게임시작버튼 눌렀음")
 
 
-            남은시간.textContent = 5  // 몇 초 남았는지 샛팅
+            남은시간.textContent = 설정시간  // 몇 초 남았는지 샛팅
 
             if (게임시작여부 == false) {  //게임 아직 시작 안했다면 게임시작
-                게임시작여부 = true
-                let 카운트
+                게임시작여부 = true  // 게임 아직 시작 안했다면 시작
+                let 카운트  // 게임 시작했다고 표시
                 카운트 = setInterval(function () {
                     남은시간.textContent = 남은시간.textContent - 1   // 1초마다 시간 감소
                     console.log(남은시간.textContent)
@@ -140,8 +146,21 @@
                     }
                 }, 1000)
             }
-
         })
+
+        // index: 0 ~배열의 총 길이
+
+        let index = Math.random(text.length)
+
+        const 입력칸 = document.querySelector("input")
+        입력칸.addEventListener("input", function () {
+            if (입력칸.value == 타이핑.textContent && 게임시작여부) {
+                점수.textContent = Number(점수.textContent) + 1 //점수 1점 증가
+                남은시간.textContent = 설정시간 // 시간은 다시 설정
+                입력칸.value = ""  // 입력칸 비우기
+            }
+        })
+
     </script>
 </body>
 
