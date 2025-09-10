@@ -115,6 +115,13 @@
             background-color: rgb(43, 157, 146);
             color: white;
         }
+
+        #carouselExampleDark {
+            width: 70%;
+            margin: 0 auto;
+            background-image: cover;
+            height: 300px;
+        }
     </style>
 
 </head>
@@ -150,9 +157,9 @@
                     <br>
                     <p class="card-text">이름 : 심민서</p>
                     <p class="card-text">나이 : 2007년생</p>
-                    <p class="card-text">힉교 : 보성여중 졸업 / 성심여고 졸업 예정</p>
-                    <p class="card-text">고등학교 3학년은 종로산업정보고에서 보냄</p>
-                    <p class="card-text">강점 : 협력</p>
+                    <p class="card-text">힉교 : 보성여중 졸업 / 성심여고 졸업 예정입니다</p>
+                    <p class="card-text">고등학교 3학년은 종로산업정보고등학교에서 보냈습니다</p>
+                    <p class="card-text">강점 : 항상 모든 일에 열정적으로 임하는 편입니다</p>
                 </div>
             </div>
         </div>
@@ -227,6 +234,38 @@
             </div>
         </div>
 
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
 
 
         <div class="card mb-3" style="max-width: 80%; margin: 0 auto;">
@@ -277,23 +316,97 @@
             </div>
         </div>
 
-        <br><br><br><br><br>
+        <div class="card mb-3" style="max-width: 80%; margin: 0 auto;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src='https://i.postimg.cc/zXpSHqDD/2025-09-10-120551.png' border='0' alt='IMG-1948' /></a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <br>
+                        <div class="small text-muted">RIOT API</div>
+                        <h2 class="card-title">OPGG</h2><br>
+                        <br>
+                        <p class="card-text">이름을 검색해 게임 기록 등을</p>
+                        <p class="card-text">확인해볼 수 있습니다.</p>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3">
+                        Read more →
+                    </button>
 
-        <h3>CONTACT</h3><br><br>
 
-        <div class="card text-center" style="width:80%; margin: 0 auto;">
-            <div class="card-header">
-                HOW TO CONTACT
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel3">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="https://i.postimg.cc/gJkGJyg2/2025-09-10-120551.png" style="width:400px;">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">CLOSE</button>
+                                    <button type="button"
+                                        onclick="location.href='http://127.0.0.1:5500/op.gg/%EB%B0%A9%EA%B3%BC%ED%9B%84.html' "
+                                        class="btn btn-primary">MOVE ON</button></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">e-mail : mins04313@gmail.com</h5>
-                <p class="card-text">e-mail : mins04313@gmail.com</p>
-            </div>
+        </div>
 
+        <br>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="https://i.postimg.cc/j2CcsjmF/2025-09-10-120551.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://i.postimg.cc/fLGS1T7s/2025-09-10-120551.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://i.postimg.cc/kXczMV2T/2025-09-10-120551.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
 
-        <br><br><br><br><br><br>
 
 </body>
 
