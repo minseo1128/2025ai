@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 와이어프레임</title>
+
+    <style>
+        * {
+            color: #333333;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        .header {
+            width: 1200px;
+            height: 100px;
+            background-color: tomato;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100px;
+            background-color: turquoise;
+        }
+
+        .menu {
+            display: flex;
+            margin-right: 30px;
+        }
+
+        .menu>li {
+            width: 150px;
+            height: 50px;
+            background-color: steelblue;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .sub_menu>li {
+            background-color: steelblue;
+        }
+
+        li:hover {
+            background-color: chartreuse;
+        }
+
+        .mini-box1 {
+            margin: 200px;
+            height: 40px;
+        }
+
+
+        .slide_container {
+            width: 1200px;
+            height: 300px;
+            background-color: darkgoldenrod;
+        }
+
+        .contents {
+            display: flex;
+        }
+
+        .contents>div {
+            width: 400px;
+            height: 200px;
+            background-color: slateblue;
+        }
+
+        .box4 {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100px;
+            border-top: none;
+        }
+
+        .footer {
+            display: flex;
+            height: 100px;
+        }
+        .logo2 {
+            width: 200px; background-color: silver;
+        }
+        .copy {
+            width: 800px;
+            background-color: aquamarine;
+        }
+        .sns {
+            width: 200px; background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">로고</div>
+            <ul class="menu">
+                <li><a herf="#">탑</a>
+                    <ul class="sub_menu">
+                        <li><a herf="#">블라우스</a></li>
+                        <li><a herf="#">티</a></li>
+                        <li><a herf="#">셔츠</a></li>
+                        <li><a herf="#">니트</a></li>
+                    </ul>
+                </li>
+
+                <li><a herf="#">아우터</a>
+                    <ul class="sub_menu">
+                        <li><a herf="#">자켓</a></li>
+                        <li><a herf="#">코트</a></li>
+                        <li><a herf="#">가디건</a></li>
+                        <li><a herf="#">머플러</a></li>
+                    </ul>
+                </li>
+                <li><a herf="#">팬츠</a>
+                    <ul class="sub_menu">
+                        <li><a herf="#">청바지</a></li>
+                        <li><a herf="#">짧은 바지</a></li>
+                        <li><a herf="#">긴바지</a></li>
+                        <li><a herf="#">레깅스</a></li>
+                    </ul>
+                </li>
+                <li><a herf="#">악세서리</a>
+                    <ul class="sub_menu">
+                        <li><a herf="#">귀고리</a></li>
+                        <li><a herf="#">목걸이</a></li>
+                        <li><a herf="#">반지</a></li>
+                        <li><a herf="#">팔찌</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide_container"> 슬라이드 </div>
+
+        <div class="contents">
+            <div class="con1">공지사항 갤러리</div>
+            <div class="con1">배너</div>
+            <div class="con1">바로가기</div>
+        </div>
+
+        <div class="footer">
+            <div class="logo2">로고</div>
+            <div class="copy">Copy</div>
+            <div class="sns">SNS</div>
+        </div>
+    </div>
+</body>
+
+</html>
