@@ -127,6 +127,28 @@
             height: 50px;
             background-color: rgb(255, 157, 121);
         }
+
+        footer {
+            display: flex;
+        }
+
+        .logo2 {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .menu2 {
+            width: 1000px;
+            height: 50px;
+            background-color: rgb(223, 243, 246);
+        }
+
+        .copy {
+            width: 1000px;
+            height: 50px;
+            background-color: chocolate;
+        }
     </style>
 </head>
 
@@ -183,6 +205,30 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const 공지사항 = document.querySelector(".notice")
+        const 갤러리 = document.querySelector(".gallery")
+
+        const 공지사항내용 = document.querySelector(".tab-con1")
+        const 갤러리내용 = document.querySelector(".tab-con2")
+
+        공지사항.addEventListener("click", function () {
+            공지사항.classList.add("active") //공지사항 active 클래스 추가
+            갤러리.classList.remove("active") // 갤러리는 비활성 (active 클래스 삭제)
+
+            공지사항내용.style.display = "block" // 공지사항 컨텐츠 보이기
+            갤러리내용.style.display = "none" // 갤러리는 컨텐츠 숨기기
+        })
+
+        갤러리.addEventListener("click", function () {
+            공지사항.classList.remove("active")// 공지사항 비활성 (active 클래스 삭제)
+            갤러리.classList.add("active") // 갤러리는 active 클래스 추가
+
+            갤러리내용.style.display = "block" // 갤러리는 컨텐츠 보이기
+            공지사항내용.style.display = "none" // 공지사항 컨텐츠 숨기기
+        }) 
+    </script>
 </body>
 
 </html>

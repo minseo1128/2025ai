@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: #333333;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        .header {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: orange;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100px;
+            background-color: orangered;
+        }
+
+        .menu {
+            height: 50px;
+            line-height: 50px;
+            display: flex;
+        }
+
+        .menu li {
+            text-align: center;
+            width: 150px;
+            background-color: coral;
+        }
+
+        .menu li:hover {
+            background-color: crimson;
+        }
+
+        .slide_container {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: blueviolet;
+        }
+
+        .contents {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .con1 {
+            width: 400px;
+            height: 200px;
+            background-color: chocolate;
+        }
+
+        .con_container {
+            width: 200px;
+            text-align: center;
+            background-color: white;
+            display: flex;
+        }
+
+        .active {
+            background-color: cornflowerblue;
+        }
+
+        .con_container div {
+            width: 100px;
+            height: 50px;
+        }
+
+        .tap1 {
+            width: 400px;
+            height: 150px;
+        }
+
+        .tap2 {
+            width: 400px;
+            height: 150px;
+            display: none;
+        }
+
+        .con2 {
+            width: 400px;
+            height: 200px;
+            background-color: darkcyan;
+        }
+
+        .con3 {
+            width: 400px;
+            height: 200px;
+            background-color: darkorchid;
+        }
+
+        .footer {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .footer_container {
+            width: 1000px;
+            height: 100px;
+        }
+
+        .footer_menu {
+            width: 1000px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .copyright {
+            width: 1000px;
+            height: 50px;
+            background-color: darksalmon;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                로고
+            </div>
+            <ul class="menu">
+                <li><a href="">개인</a>
+                    <ul class="sub_menu">
+                        <li><a href="">조회</a></li>
+                        <li><a href="">이체</a></li>
+                        <li><a href="">공과금</a></li>
+                        <li><a href="">예금/신탁</a></li>
+                    </ul>
+                </li>
+                <li><a href="">기업</a>
+                    <ul class="sub_menu">
+                        <li><a href="">조회</a></li>
+                        <li><a href="">이체</a></li>
+                        <li><a href="">전자결제</a></li>
+                        <li><a href="">수표/어음</a></li>
+                    </ul>
+                </li>
+                <li><a href="">금융상품</a>
+                    <ul class="sub_menu">
+                        <li><a href="">저축상품</a></li>
+                        <li><a href="">대출상품</a></li>
+                        <li><a href="">투자상품</a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+                <li><a href="">카드</a>
+                    <ul class="sub_menu">
+                        <li><a href="">카드정보</a></li>
+                        <li><a href="">카드신청</a></li>
+                        <li><a href="">이용내역조회</a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="slide_container">
+            슬라이드
+        </div>
+        <div class="contents">
+            <div class="con1">
+                <div class="con_container">
+                    <div class="notice active">공지사항</div>
+                    <div class="gallery">갤러리</div>
+                </div>
+                <div class="tap1">
+                    <p>Evernight Dance</p>
+                    <p>에버나이트 댄스</p>
+                </div>
+                <div class="tap2">
+                    <img width="100px" src="https://i.redd.it/28fu3vahl5tf1.gif" alt="">
+                    <img width="100px" src="https://i.redd.it/28fu3vahl5tf1.gif" alt="">
+                    <img width="100px" src="https://i.redd.it/28fu3vahl5tf1.gif" alt="">
+                </div>
+            </div>
+            <div class="con2">
+                배너
+            </div>
+            <div class="con3"> 
+                바로가기
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logo">
+                로고
+            </div>
+            <div class="footer_container">
+                <div class="footer_menu">하단메뉴</div>
+                <div class="copyright">Copyright</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let notice = document.querySelector(".notice"),
+            gallery = document.querySelector(".gallery"),
+            notice_isActive = true,
+            gallery_isActive = false
+
+        notice.addEventListener("click", () => {
+            if (!notice_isActive) {
+                notice_isActive = true
+                gallery_isActive = false
+                notice.classList.add("active")
+                gallery.classList.remove("active")
+                document.querySelector(".tap1").style.display = "block"
+                document.querySelector(".tap2").style.display = "none"
+            }
+        })
+
+        gallery.addEventListener("click", () => {
+            if (!gallery_isActive) {
+                gallery_isActive = true
+                notice_isActive = false
+                gallery.classList.add("active")
+                notice.classList.remove("active")
+                document.querySelector(".tap2").style.display = "block"
+                document.querySelector(".tap1").style.display = "none"
+            }
+        })
+    </script>
+</body>
+
+</html>
