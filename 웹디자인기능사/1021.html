@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333333;
+        }
+
+        body {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            width: 1200px;
+            height: 100px;
+            background-color: turquoise;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo1 {
+            width: 200px;
+            height: 100px;
+            background-color: springgreen;
+        }
+
+        .menu {
+            display: flex;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 50px;
+            position: relative;
+        }
+
+        .menu li {
+            width: 150px;
+            text-align: center;
+            background-color: steelblue;
+        }
+
+        .bg-right {
+            width: 50px;
+            height: 150px;
+            background-color: steelblue;
+            position: absolute;
+            top: 50px;
+            right: -50px;
+        }
+
+        .bg-left {
+            width: 550px;
+            height: 150px;
+            background-color: steelblue;
+            position: absolute;
+            top: 50px;
+            left: -550px;
+        }
+
+        .slide_container {
+            width: 1200px;
+            height: 150px;
+            background-color: steelblue;
+        }
+
+        .img_slide {
+            width: 1200px;
+            height: 150px;
+            background-color: navajowhite;
+
+        }
+
+        .contents {
+            width: 1200px;
+            height: 200px;
+            display: flex;
+        }
+
+        .contents>div {
+            width: 400px;
+            height: 200px;
+        }
+
+        .con3 {
+            background-color: cornflowerblue;
+        }
+
+        .con2 .img img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+        .footer {
+            width: 1200px;
+            height: 100px;
+            display: flex;
+        }
+
+        .copy {
+            width: 800px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .con2 {
+            width: 400px;
+            height: 200px;
+        }
+
+        .con3 {
+            width: 400px;
+            height: 200px;
+            background-color: darkorchid;
+        }
+
+        .footer {
+            width: 1200px;
+            height: 100px;
+            display: flex;
+        }
+
+        .footer_container {
+            width: 200px;
+            height: 100px;
+        }
+
+        .footer_menu {
+            width: 200px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .copyright {
+            width: 1000px;
+            height: 100px;
+            background-color: darksalmon;
+        }
+
+        .family {
+            width: 200px;
+            height: 50px;
+            background-color: deepskyblue;
+        }
+
+
+        .popup {
+            width: 700px;
+            height: 500px;
+            border: 3px solid #333;
+            left: 50%;
+            position: absolute;
+            top: 0%;
+            margin-left: -350px;
+            top: 150px;
+            background-color: white;
+            padding: 30px;
+            display: none;
+            /*클릭하면 나오게*/
+            z-index: 200;
+        }
+
+        .popup button {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .box1 {
+            width: 250px;
+        }
+
+        .notice {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            background-color: crimson;
+        }
+
+        .gallery {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            background-color: darkkhaki;
+        }
+
+        .park {
+            width: 400px;
+            height: 150px;
+            background-color: crimson;
+        }
+
+        .tap {
+            width: 400px;
+            height: 150px;
+            background-color: darkkhaki;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            background-color: #00000031;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="main_menu"></div>
+            <div class="logo1"></div>
+            <ul class="menu">
+                <li class="li"><a href="#">회사소개</a>
+                    <ul>
+                        <div class="bg-left"></div>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">조직구성도</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="li"><a href="#">사업영역</a>
+                    <ul>
+                        <li><a href="#">전원주택</a></li>
+                        <li><a href="#">도시재생</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                </li>
+                <li class="li"><a href="#">입주정보</a>
+                    <ul>
+                        <li><a href="#">입주단지</a></li>
+                        <li><a href="#">입주캘린더</a></li>
+                        <li v><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li class="li"><a href="#">고객센터</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">건축상담</a></li>
+                        <li><a href="#">홍보자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </header>
+
+        <section class="slide_container"></section>
+
+        <section class="img_slide">이미지 슬라이드</section>
+
+        <section class="contents">
+            <div class="con1">
+                <div class="notice">
+                    공지사항
+                </div>
+                <div class="park">
+                    <p>1. 나피리군단장박태준</p>
+                    <p>2. 말파원펀장인태준</p>
+                    <p>3. 나피리의주인</p>
+                </div>
+            </div>
+            <div class="con2">
+                <div class="gallery">
+                    갤러리
+                </div>
+                <div class="tap">
+                    <div class="img"><img
+                            src="https://i.pinimg.com/1200x/e3/4e/41/e34e416895c1dcd782eec1d653d8932b.jpg">
+                    </div>
+                    <div class="img"><img
+                            src="https://i.pinimg.com/1200x/e3/4e/41/e34e416895c1dcd782eec1d653d8932b.jpg">
+                    </div>
+                    <div class="img"><img
+                            src="https://i.pinimg.com/1200x/e3/4e/41/e34e416895c1dcd782eec1d653d8932b.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <div class="con3">바로가기</div>
+        </section>
+
+        <footer class="footer">
+            <div class="copyright">
+                Copyright
+            </div>
+            <div class="footer_container">
+                <div class="footer_menu">SNS</div>
+                <div class="family">패밀리사이트</div>
+            </div>
+        </footer>
+
+        <div class="popup">
+            <h1>타이틀</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis deleniti animi et minus soluta deserunt
+                mollitia, odio natus sunt aliquid sint esse quia? Id, modi? Ut iure consectetur quo esse?</p>
+            <button>X 닫기</button>
+        </div>
+
+        <div class="bg"></div>
+    </div>
+
+    <script>
+        const 박태준 = document.querySelector(".park")
+        const 팝업 = document.querySelector(".popup")
+        const 버튼 = document.querySelector(".popup button")
+        const 배경 = document.querySelector(".bg")
+
+        박태준.addEventListener("click", function () {
+            팝업.style.display = "block"
+            배경.style.display = "block"
+        })
+
+        버튼.addEventListener("click", function () {
+            팝업.style.display = "none"
+            배경.style.display = "none"
+        })
+    </script>
+
+</body>
+
+</html>
