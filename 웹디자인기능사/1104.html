@@ -3,140 +3,209 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C-1</title>
+    <title>세로형 예제</title>
+    <link rel="stylesheet" href="13주차 실습2 세로형.css">
+
     <style>
         * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            position: relative;
-        }
-
-        li {
-            list-style-type: none;
+            padding: 0px;
+            margin: 0px
         }
 
         a {
             text-decoration: none;
         }
 
-
-        .header {
-            width: 1000px;
-            height: 100px;
-            display: flex;
-            margin: 0 auto;
-            align-items: end;
-            justify-content: space-between;
-        }
-
-        .logo {
-            width: 200px;
-            height: 40px;
-            background-color: lightgreen;
-        }
-
-        .menu {
-
-            height: 50px;
-            line-height: 50px;
-            margin-right: 50px;
-            position: relative;
-        }
-
-        .menu li {
-            width: 200px;
-            text-align: center;
-            background-color: steelblue;
+        li {
             list-style: none;
         }
 
-        li:hover {
-            cursor: pointer;
-            background-color: white;
+        #wrap1 {
+            margin: 0 auto;
+            width: 1000px;
+            height: 650px;
         }
 
-        .slide {
+        h1,
+        h2,
+        h3 {
+            color: white;
+        }
+
+        #side {
+            float: left;
+            background-color: rgb(255, 0, 106);
+            width: 200px;
+            height: 650px;
+        }
+
+        .logo1 {
+            background-color: rgb(148, 49, 118);
+            width: 200px;
+            height: 100px;
+        }
+
+        #nav ul li {
+            background-color: rgb(255, 184, 231);
+            text-align: center;
+        }
+
+        #nav ul li ul li:hover {
+            background-color: rgb(189, 116, 159);
+        }
+
+        #nav ul li a {
+            font-size: 12pt;
+            display: block;
+            color: #FFFFFF;
+            padding: 12px;
+        }
+
+        /*.sub {display: none;}*/
+
+        /*왼쪽*/
+
+        #right {
+            float: left;
+        }
+
+        #slide {
+            background-color: rgb(184, 47, 93);
             width: 800px;
             height: 350px;
-            background-color: paleturquoise;
+            text-align: center;
         }
 
-        .footer_menu {
-            
+        /*이미지 슬라이드*/
+
+        #contents {
+            width: 800px;
+            height: 200px;
         }
+
+        #contents div {
+            float: left;
+            width: 33.3%;
+            height: 200px;
+        }
+
+        #con1 {
+            background-color: rgb(124, 0, 58);
+        }
+
+        #con2 {
+            background-color: rgb(150, 48, 70);
+        }
+
+        #con3 {
+            background-color: rgb(173, 73, 73);
+        }
+
+        /*컨텐츠*/
+
+        #footer {
+            width: 800px;
+            height: 100px;
+        }
+
+        #footer div {
+            float: left;
+        }
+
+        .logo2 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(199, 70, 134);
+        }
+
+        #menu {
+            width: 600px;
+            height: 50px;
+            background-color: rgb(223, 117, 166);
+        }
+
+        #copy {
+            width: 600px;
+            height: 50px;
+            background-color: rgb(255, 172, 237);
+        }
+
+        /*발바닥*/
     </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <!--왼쪽-->
-        <div class="left">
-            <div class="logo">로고</div>
-            <div class="menu">
-                <li class="li"><a href="#">이용안내</a>
-                    <ul>
-                        <div class="bg-left"></div>
-                        <li><a href="#">이용방법</a></li>
-                        <li><a href="#">이용시간</a></li>
-                        <li><a href="#">이용요금</a></li>
-                    </ul>
-                </li>
-                <li class="li"><a href="#">이벤트정보</a>
-                    <ul>
-                        <li><a href="#">전원주택</a></li>
-                        <li><a href="#">도시재생</a></li>
-                        <li><a href="#">인테리어</a></li>
-                    </ul>
-                </li>
-                <li class="li"><a href="#">프로그램</a>
-                    <ul>
-                        <li><a href="#">입주단지</a></li>
-                        <li><a href="#">입주캘린더</a></li>
-                        <li v><a href="#"></a></li>
-                    </ul>
-                </li>
-                <li class="li"><a href="#">고객센터</a>
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">건축상담</a></li>
-                        <li><a href="#">홍보자료실</a></li>
-                    </ul>
-                </li>
+    <div id="wrap1">
+        <aside id="side">
+            <div class="logo1">   p   
+                <h1>로고</h1>
             </div>
-        </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">MENU-1</a>
+                        <ul class="sub">
+                            <li><a href="#">sub-1</a></li>
+                            <li><a href="#">sub-2</a></li>
+                            <li><a href="#">sub-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU-2</a>
+                        <ul class="sub">
+                            <li><a href="#">sub-1</a></li>
+                            <li><a href="#">sub-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU-3</a>
+                        <ul class="sub">
+                            <li><a href="#">sub-1</a></li>
+                            <li><a href="#">sub-2</a></li>
+                            <li><a href="#">sub-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU-4</a>
+                        <ul class="sub">
+                            <li><a href="#">sub-1</a></li>
+                            <li><a href="#">sub-2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!--옆구리-->
 
-        <!--오른쪽-->
-        <div class="right">
-            <div class="slide">이미지 슬라이드</div>
-
-            <div class="contents">
-                <div class="con1">
-                    <div class="notice">공지사항</div>
-                    <div class="tap1">
-                        <li class="li">공지사항1</li>
-                        <li>공지사항2</li>
-                    </div>
-                </div>
-                <div class="con2">
-                    <div class="gallery">갤러리</div>
-                </div>
-                <div class="con3">배너</div>
+        <div id="right">
+            <div id="slide">
+                <img src="개.png" alt="끝까지" height="350px">
             </div>
+            <!--이미지슬라이드-->
 
-            <footer class="footer">
-                <div class="footer_container">
-                    <div class="footer_menu">하단메뉴</div>
-                    <div class="copyright">Copyright</div>
+            <div id="contents">
+                <div id="con1">
+                    <h2>공지사항</h2>
                 </div>
-                <div class="family">
-                    패밀리사이트
+                <div id="con2">
+                    <h2>갤러리</h2>
+                </div>
+                <div id="con3">
+                    <h2>배너</h2>
+                </div>
+            </div>
+            <!--컨텐츠-->
+
+            <footer id="footer">
+                <div class="logo2">
+                    <h3>로고</h3>
+                </div>
+                <div>
+                    <h3 id="menu">하단메뉴</h3>
+                </div>
+                <div>
+                    <h3 id="copy">copyright</h3>
                 </div>
             </footer>
+            <!--발바닥-->
         </div>
     </div>
 </body>
