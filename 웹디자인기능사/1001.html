@@ -90,6 +90,12 @@
             width: 1200px;
             height: 300px;
             background-color: yellowgreen;
+            overflow: hidden;
+        }
+
+        .slide_cover {
+            display: flex;
+            position: relative;
         }
 
         .contents {
@@ -143,6 +149,10 @@
             cursor: pointer;
             background-color: white;
         }
+
+        .slide_cover {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -184,7 +194,21 @@
             </ul>
         </header>
 
-        <section class="slide_container"></section>
+        <section class="slide_container">
+
+            <div class="slide_cover">
+                <div class="slide"><img
+                        src="https://media.discordapp.net/attachments/1341586538324168736/1422109626547179600/img1.jpg?ex=6913820c&is=6912308c&hm=df71524442793de0388a9a9f40513ebb7293b0d052d4304235dd1f0cc7a94016&=&format=webp&width=1692&height=423"
+                        alt=""></div>
+                <div class="slide"><img
+                        src="https://media.discordapp.net/attachments/1341586538324168736/1422109626798833714/img2.jpg?ex=6913820c&is=6912308c&hm=faf41aaa8c2b185a613ebee89a3b698d984b1fa34218d2e840cc9deaeb9318f5&=&format=webp&width=1692&height=423"
+                        alt=""></div>
+                <div class="slide"><img
+                        src="https://media.discordapp.net/attachments/1341586538324168736/1422109627159678996/img3.jpg?ex=6913820c&is=6912308c&hm=deb3bef79c52b03a094741199fb6296e10963af7f94b863f1d488f33ec027b6c&=&format=webp&width=1692&height=423"
+                        alt=""></div>
+            </div>
+
+        </section>
 
         <section class="contents">
             <div class="con1">공지사항</div>
@@ -198,6 +222,16 @@
             <div class="family"></div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script>
+        setInterval(function() {
+            $(".slide_cover").animate({left:-1200}, 500).delay(3000)
+            $(".slide_cover").animate({left:-2400}, 500).delay(3000)
+            $(".slide_cover").animate({left:0}, 500).delay(3000)
+        }, 0)
+    </script>
 
 </body>
 
